@@ -185,7 +185,7 @@ Critérios:
 
 ---
 
-## ⚡ Dicas Rápidas
+## ⚡ Dicas Rapidas
 
 ### ✅ BOM
 ```

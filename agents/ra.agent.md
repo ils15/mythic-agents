@@ -394,11 +394,11 @@ Deployment ready for: Staging environment
 
 ## When to Delegate
 
-- **@hefesto**: For application code changes
-- **@afrodite**: For React app configuration
+- **@hermes**: For application code changes
+- **@aphrodite**: For React app configuration
 - **@maat**: For database container tuning
 - **@ops**: For server-level operations (systemd, cron)
-- **@mnemosine**: For infrastructure documentation
+- **@mnemosyne**: For infrastructure documentation
 
 ## Output Format
 

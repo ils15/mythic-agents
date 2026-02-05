@@ -56,7 +56,7 @@ Backend     Frontend   Database   Review   Infrastructure
 ### 🧠 Metis (Strategic Planner)
 **Role:** Design architecture & create TDD roadmaps  
 **When:** Complex features, significant design decisions  
-**Invocation:** `@metis: Plan [architecture] for [feature]`  
+**Invocation:** `@aphrodite: Plan [architecture] for [feature]`  
 **Output:** `plans/[feature]/plan.md` with 3-10 phases  
 **Depends on:** Apollo (for discovery of existing patterns)
 
@@ -155,7 +155,7 @@ Coverage requirement: >80%
 ### 💎 Athena (Frontend Implementation)
 **Role:** React components, responsive design, accessibility  
 **When:** Creating/modifying UI, components, user flows  
-**Invocation:** `@athena: Build [component/page]`  
+**Invocation:** `@aphrodite: Build [component/page]`  
 **Specialization:**
 - React component composition
 - TypeScript strict mode
@@ -389,7 +389,7 @@ Phase approved by Tyr
 
 ### 1. Plan (5 min)
 ```bash
-@metis: Plan adding JWT auth with refresh tokens
+@aphrodite: Plan adding JWT auth with refresh tokens
 ```
 
 ### 2. Review Plan (10 min)
@@ -432,7 +432,7 @@ START: What do you need?
 │  └─ USE: @zeus (orchestrates all)
 │
 ├─ "Just planning, no implementation"
-│  └─ USE: @metis (create plan.md)
+│  └─ USE: @aphrodite (create plan.md)
 │
 ├─ "Find where something is used"
 │  └─ USE: @apollo (parallel searches)
@@ -441,7 +441,7 @@ START: What do you need?
 │  └─ USE: @hermes (backend + TDD)
 │
 ├─ "New React component / UI"
-│  └─ USE: @athena (frontend + TDD)
+│  └─ USE: @aphrodite (frontend + TDD)
 │
 ├─ "Database schema / query optimization"
 │  └─ USE: @tethys (schema + TDD)
@@ -477,7 +477,7 @@ START: What do you need?
 
 ## Tips & Tricks
 
-🎯 **Always plan first** - `@metis` before `@zeus`  
+🎯 **Always plan first** - `@aphrodite` before `@zeus`  
 🎯 **Use pause points** - Review at critical junctures  
 🎯 **Check artifacts** - `plans/[feature]/` is your audit trail  
 🎯 **Direct agents for quick tasks** - Don't always orchestrate  
@@ -499,7 +499,7 @@ Result: Minimal code change, >80% coverage
 
 ### Example 2: Feature (Metis → Zeus → Artifacts)
 ```
-Plan: @metis: Plan adding 2FA to login flow
+Plan: @aphrodite: Plan adding 2FA to login flow
 Review: You approve 3-phase plan
 Implement: @zeus: Implement 2FA using approved plan
 Result: 3 phases, each reviewed, all TDD, all documented

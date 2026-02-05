@@ -51,7 +51,7 @@ plans/
 ### 1️⃣ Artifact Type: plan.md (Created by Metis)
 
 **Purpose:** Detailed planning document with phases, tasks, and requirements  
-**Created by:** @metis during planning phase  
+**Created by:** @aphrodite during planning phase  
 **Reviewed by:** User (Pause Point 1)  
 **Stored at:** `plans/[feature-name]/plan.md`
 

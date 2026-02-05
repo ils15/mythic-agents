@@ -6,41 +6,41 @@ agent: apollo-subagent
 tools: ['search', 'usages']
 ---
 
-# Debug Rápido (Apollo - Scout)
+# Debug Quickly (Apollo - Scout)
 
 ## 5-10 Parallel Searches
 
-Apollo lança buscas paralelas simultâneas:
+Apollo launches simultaneous parallel searches:
 
-Search 1: Mensagem de erro exata
-Search 2: Função/classe mencionada
-Search 3: File patterns relacionados
-Search 4: Test cases similares
+Search 1: Exact error message
+Search 2: Mentioned function/class
+Search 3: Related file patterns
+Search 4: Similar test cases
 Search 5: Related issues/PRs
 Search 6: Stack trace patterns
 Search 7: Config files
 Search 8: Logging statements
-Search 9: Dependencies mentioned
-Search 10: Recent changes em area
+Search 9: Mentioned dependencies
+Search 10: Recent changes in area
 
 ## Analysis & Synthesis
-- Elimina duplicatas
-- Identifica file relationships
-- Extrai padrões
-- Retorna achados prioritizados
+- Eliminate duplicates
+- Identify file relationships
+- Extract patterns
+- Return prioritized findings
 
 ## Recommendations
 
-After analysis, @apollo retorna:
-1. **Root Cause Hypothesis**: O que provavelmente está errado
-2. **Key Files**: Arquivos mais relevantes
-3. **Reproduction Steps**: Como reproduzir
-4. **Suggested Fix**: Direção de solução
-5. **Next Steps**: Próximas agentes para envolver
+After analysis, @apollo returns:
+1. **Root Cause Hypothesis**: What's probably wrong
+2. **Key Files**: Most relevant files
+3. **Reproduction Steps**: How to reproduce
+4. **Suggested Fix**: Solution direction
+5. **Next Steps**: Next agents to involve
 
 ## When to Use
-- Bug report recebido
-- Error stack trace confuso
+- Bug report received
+- Confusing error stack trace
 - Performance issue diagnosis
 - Regression debugging
-- Quando precisa exploração rápida
+- When you need quick exploration

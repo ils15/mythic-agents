@@ -4,50 +4,50 @@ name: "Code Review & Security Standards"
 applyTo: "**"
 ---
 
-# Code Review Standards (Têmis)
+# Code Review Standards (Temis)
 
 ## Review Scope
 - Review ONLY changed files
-- Check diff, não arquivo inteiro
-- Revisar commits relacionados
-- Link para related PRs/issues
+- Check diff, not entire file
+- Review related commits
+- Link to related PRs/issues
 
 ## Correctness
-- Logic é correto e completo
-- Edge cases tratados
-- Error handling apropriado
-- Performance aceitável
+- Logic is correct and complete
+- Edge cases handled
+- Error handling appropriate
+- Performance acceptable
 
 ## Code Quality
-- No duplicação (DRY principle)
+- No duplication (DRY principle)
 - Single responsibility functions
-- Naming claro e descritivo
+- Clear and descriptive naming
 - Reasonable complexity
 - Proper file sizes
 
 ## Testing
-- Unit tests escritos
+- Unit tests written
 - >80% code coverage
-- Integration tests para workflows
-- Edge cases testados
-- Error conditions testados
+- Integration tests for workflows
+- Edge cases tested
+- Error conditions tested
 
 ## Security (OWASP Top 10)
 - Input validation present
-- Sem hardcoded secrets/credentials
+- No hardcoded secrets/credentials
 - Secure dependencies
 - No XXE, CSRF, XSS vulnerabilities
 - Authentication/authorization proper
-- Encryption para dados sensíveis
-- Session/token management seguro
-- Rate limiting em endpoints sensitivos
-- Audit logging para eventos de security
+- Encryption for sensitive data
+- Secure session/token management
+- Rate limiting on sensitive endpoints
+- Audit logging for security events
 
 ## Documentation
 - Public functions documented
-- Comments explicam WHY não WHAT
-- README/guides acurados
-- API documentation completa
+- Comments explain WHY not WHAT
+- README/guides accurate
+- API documentation complete
 
 ## Feedback Format
 - Return: APPROVED | NEEDS_REVISION | FAILED

@@ -2,56 +2,56 @@
 name: review-code
 description: "Comprehensive code review with security audit, test coverage analysis, and quality gates"
 argument-hint: "[Files to review or PR description]"
-agent: athena-subagent
+agent: aphrodite-subagent
 tools: ['search', 'usages']
 ---
 
-# Revisar Código com Segurança (Têmis)
+# Review Code with Security (Temis)
 
 ## Review Checklist
 
 ### Correctness (CRITICAL)
-- [ ] Logic correto e completo
-- [ ] Edge cases tratados
-- [ ] Error handling apropriado
-- [ ] Performance aceitável
-- [ ] Sem OWASP vulnerabilities
+- [ ] Logic correct and complete
+- [ ] Edge cases handled
+- [ ] Error handling appropriate
+- [ ] Performance acceptable
+- [ ] No OWASP vulnerabilities
 
 ### Code Quality
-- [ ] Sem duplicação (DRY)
+- [ ] No duplication (DRY)
 - [ ] Single responsibility functions
-- [ ] Naming claro
+- [ ] Clear naming
 - [ ] Reasonable complexity
-- [ ] File size apropriado
+- [ ] Appropriate file size
 
 ### Architecture & Design
-- [ ] Segue design patterns
+- [ ] Follows design patterns
 - [ ] Proper separation of concerns
-- [ ] Dependencies bem gerenciadas
-- [ ] Extensibilidade considerada
-- [ ] Consistência com codebase
+- [ ] Dependencies well managed
+- [ ] Extensibility considered
+- [ ] Consistent with codebase
 
 ### Testing
-- [ ] Unit tests escritos
+- [ ] Unit tests written
 - [ ] >80% coverage
-- [ ] Integration tests existem
-- [ ] Edge cases testados
-- [ ] Error conditions testados
+- [ ] Integration tests exist
+- [ ] Edge cases tested
+- [ ] Error conditions tested
 
 ### Documentation
-- [ ] Funções públicas documentadas
-- [ ] Comments explicam WHY
-- [ ] README/guides acurados
-- [ ] API docs completos
-- [ ] Assumptions documentadas
+- [ ] Public functions documented
+- [ ] Comments explain WHY
+- [ ] README/guides accurate
+- [ ] API docs complete
+- [ ] Assumptions documented
 
 ### Security (OWASP)
 - [ ] Input validation present
-- [ ] Sem hardcoded secrets
+- [ ] No hardcoded secrets
 - [ ] Secure dependencies
 - [ ] No XXE, CSRF, XSS
-- [ ] Auth/authz corretos
-- [ ] Encryption para dados sensíveis
+- [ ] Auth/authz correct
+- [ ] Encryption for sensitive data
 - [ ] Session/token management
 - [ ] Rate limiting
 - [ ] Audit logging
@@ -67,6 +67,6 @@ tools: ['search', 'usages']
 - 🟢 LOW: Style, non-critical
 
 ## When to Use
-- Antes de merge para main
+- Before merge to main
 - Security audits
-- Verificar compliance
+- Verify compliance

@@ -7,39 +7,39 @@ applyTo: "**/*.py"
 # Backend Development Standards (Hermes)
 
 ## Async/Await
-- Use async/await para TODAS operações I/O (database, external APIs, file operations)
-- Nunca sincronizar o que é assíncrono
-- Use `asyncio.gather()` para operações paralelas
+- Use async/await for ALL I/O operations (database, external APIs, file operations)
+- Never block on async operations
+- Use `asyncio.gather()` for parallel operations
 
 ## Test-Driven Development
-- RED: Escrever teste que falha
-- GREEN: Código mínimo para passar
-- REFACTOR: Melhorar sem quebrar testes
+- RED: Write a failing test
+- GREEN: Write minimal code to pass
+- REFACTOR: Improve without breaking tests
 
 ## Type Safety
-- Type hints em todos parâmetros de função
-- Type hints em todos return types
-- Use Pydantic para request/response validation
+- Type hints on all function parameters
+- Type hints on all return types
+- Use Pydantic for request/response validation
 
 ## Code Organization
-- Máximo 300 linhas por arquivo
-- Separe: routes → services → models
-- Docstrings em funções públicas (Google format)
+- Maximum 300 lines per file
+- Separate: routes → services → models
+- Docstrings on public functions (Google format)
 
 ## Error Handling
-- Nunca silent failures (catch e log)
-- Use HTTP status codes apropriados
-- Retorne mensagens de erro amigáveis (sem stack traces)
-- Implemente retry logic com exponential backoff
+- Never silent failures (catch and log)
+- Use appropriate HTTP status codes
+- Return friendly error messages (no stack traces)
+- Implement retry logic with exponential backoff
 
 ## Performance
-- Evite N+1 queries (use eager loading/joins)
-- Implementar pagination para list endpoints
-- Cache para dados frequentemente acessados
-- Monitor async deadlocks
+- Avoid N+1 queries (use eager loading/joins)
+- Implement pagination for list endpoints
+- Cache frequently accessed data
+- Monitor for async deadlocks
 
 ## Security
-- Input validation em todas endpoints
+- Input validation on all endpoints
 - CSRF protection
-- Rate limiting para endpoints sensitivos
-- Sanitize logs (nunca log senhas/tokens)
+- Rate limiting for sensitive endpoints
+- Sanitize logs (never log passwords/tokens)

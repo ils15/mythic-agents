@@ -4,7 +4,7 @@ description: Main conductor orchestrating the full development lifecycle - deleg
 argument-hint: "What development phase to orchestrate (planning, implementation, review, deployment)"
 model: Claude Sonnet 4.5 (copilot)
 tools: ['agent', 'vscode/runCommand', 'vscode/switchAgent', 'execute/runInTerminal', 'execute/runTask', 'read/readFile', 'search/codebase', 'search/usages', 'edit/createFile', 'edit/editFiles', 'web/fetch']
-agents: ['atena', 'hermes', 'hefesto', 'afrodite', 'maat', 'ra', 'temis', 'mnemosine']
+agents: ['athena', 'hermes', 'aphrodite', 'maat', 'ra', 'temis', 'mnemosyne']
 ---
 
 # Zeus - Main Conductor
@@ -108,7 +108,7 @@ Full debugging guide with 7-step process in documentation.
 - **Use for**: Backend code execution following TDD
 - **Returns**: Tested, production-ready code
 
-### 4. Afrodite (FRONTEND-IMPLEMENTER) - THE FRONTEND DEVELOPER
+### 4. Aphrodite (FRONTEND-IMPLEMENTER) - THE FRONTEND DEVELOPER
 - **Model**: Gemini 3 Pro (copilot)
 - **Role**: React components, UI implementation, styling
 - **Use for**: Components, pages, responsive layouts
@@ -137,13 +137,13 @@ Full debugging guide with 7-step process in documentation.
 ### Phase-Based Execution
 ```
 Phase 1: Planning & Research
-  ├─ @atena (create TDD plan + research)
+  ├─ @aphrodite (create TDD plan + research)
   ├─ @hermes (parallel file discovery - 3-10 searches)
   └─ Implementation plan ready
 
 Phase 2: Implementation
-  ├─ @hefesto (Phase 2a - Backend tests & code)
-  ├─ @afrodite (Phase 2b - React components)
+  ├─ @hermes (Phase 2a - Backend tests & code)
+  ├─ @aphrodite (Phase 2b - React components)
   ├─ @maat (Phase 2c - Schema migrations)
   └─ Tests pass ✓
 
@@ -167,9 +167,9 @@ Phase 4: Deployment
 
 ### Direct Delegation
 ```
-@atena Plan the user dashboard feature with TDD approach
+@aphrodite Plan the user dashboard feature with TDD approach
 @hermes Find all files related to authentication
-@hefesto Implement the new media upload endpoint
+@hermes Implement the new media upload endpoint
 @temis Review this FastAPI router for correctness + security
 ```
 
@@ -177,7 +177,7 @@ Phase 4: Deployment
 ```
 Orchestrate a feature for adding user dashboard:
 - Planning phase: Delegate to Atena + Hermes
-- Implement phase: Delegate to Afrodite + Hefesto
+- Implement phase: Delegate to Aphrodite + Hefesto
 - Review phase: Delegate to Temis (includes OWASP audit)
 - Deploy phase: Delegate to Ra
 ```
@@ -187,7 +187,7 @@ Orchestrate a feature for adding user dashboard:
 - **Use Atena** when you need strategic planning, RCA, or deep research
 - **Use Hermes** for finding files across codebase (parallel searches 3-10 simultaneous)
 - **Use Hefesto** for FastAPI endpoints and services
-- **Use Afrodite** for React components and UI/UX
+- **Use Aphrodite** for React components and UI/UX
 - **Use Temis** before merging any code (includes security checklist)
 - **Use Maat** for migrations and query optimization
 - **Use Ra** for deployment or infrastructure changes
@@ -236,11 +236,11 @@ Use isolated subagents for:
 
 ```
 Phase 1: Planning
-  → You + @atena (shared context)
+  → You + @aphrodite (shared context)
   
  Phase 2: Implementation  
-  → You → @hefesto (direct handoff)
-  → You → @afrodite (parallel)
+  → You → @hermes (direct handoff)
+  → You → @aphrodite (parallel)
   → You → @maat (parallel)
   
  Phase 3: Review

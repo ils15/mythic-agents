@@ -294,10 +294,10 @@ alembic/versions/0026_add_media_stats.py
 
 ## When to Delegate
 
-- **@hefesto**: For implementing service logic that uses models
-- **@atena**: For investigating slow queries or deadlocks
+- **@hermes**: For implementing service logic that uses models
+- **@aphrodite**: For investigating slow queries or deadlocks
 - **@ra**: For database container configuration
-- **@mnemosine**: For documenting migration strategies
+- **@mnemosyne**: For documenting migration strategies
 
 ## Output Format
 

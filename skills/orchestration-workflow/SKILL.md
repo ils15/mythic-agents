@@ -20,7 +20,7 @@ Practical walkthrough for using the 9-agent system end-to-end. This is your "how
 Open VS Code, start a chat with Copilot:
 
 ```
-@metis: Plan JWT authentication with refresh tokens
+@aphrodite: Plan JWT authentication with refresh tokens
 
 Requirements:
 - User login with email + password
@@ -66,7 +66,7 @@ plans/jwt-authentication/plan.md
    - Are the files to modify correct?
    - Are test requirements clear?
 3. **Ask questions or approve**
-   - If concerns: `@metis: Please adjust plan because...`
+   - If concerns: `@aphrodite: Please adjust plan because...`
    - If approved: `Plan looks good, let's proceed`
 
 ### ⏸️ PAUSE POINT 1: Plan Approval
@@ -282,7 +282,7 @@ You: "continue"
 
 **Zeus delegates to Athena:**
 ```
-@athena: Implement frontend for JWT auth
+@aphrodite: Implement frontend for JWT auth
 
 Phase 3 from: plans/jwt-authentication/plan.md
 Backend API available from Phase 2.
@@ -559,7 +559,7 @@ git push origin main
 
 ```bash
 # Step 1: Plan
-@metis: Plan [feature description]
+@aphrodite: Plan [feature description]
 
 # Step 2: Orchestrate
 @zeus: Implement feature using plan
@@ -640,7 +640,7 @@ Timeline:    30 minutes
 
 ### Pattern 2: Complex Feature (Use Full System)
 ```
-Plan:        @metis: Plan architecture
+Plan:        @aphrodite: Plan architecture
 Review:      User approves 5-phase plan ⏸️
 Orchestrate: @zeus: Implement using plan
 Result:      Complete 5-phase feature, 95% coverage
@@ -695,7 +695,7 @@ Artifacts:       4 documents (plan + 3 phases + complete)
 2. ✅ Review agent reference in `9-agent-coordination/SKILL.md`
 3. ✅ Review TDD standards in `tdd-with-agents/SKILL.md`
 4. ✅ Review artifacts in `artifact-management/SKILL.md`
-5. 🚀 Start your first feature: `@metis: Plan [your idea]`
+5. 🚀 Start your first feature: `@aphrodite: Plan [your idea]`
 
 ---
 

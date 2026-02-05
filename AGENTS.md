@@ -23,9 +23,9 @@ Zeus orchestrates:
 2. Apollo explores codebase
 3. Hermes implements backend
 4. Athena implements frontend
-5. Tethys handles database migrations
-6. Hephaestus updates Docker
-7. Tyr reviews all changes
+5. Maat handles database migrations
+6. Ra updates Docker
+7. Temis reviews all changes
 8. Mnemosyne documents
 ```
 
@@ -33,7 +33,7 @@ Zeus orchestrates:
 
 ### Planning Tier
 
-#### 🧠 **Metis** (.github/agents/metis-subagent.agent.md)
+#### 🧠 **Metis** (.github/agents/aphrodite-subagent.agent.md)
 Strategic planner with research capability. Generates detailed TDD-driven implementation roadmaps.
 
 **When to use:** Architecture decisions, technology research, detailed planning before implementation  
@@ -103,7 +103,7 @@ Backend APIs, FastAPI services, async business logic.
 
 ---
 
-#### 💎 **Athena** (.github/agents/athena-subagent.agent.md)
+#### 💎 **Athena** (.github/agents/aphrodite-subagent.agent.md)
 Frontend UI/UX, React components, responsive design.
 
 **When to use:** Component creation, UI improvements, accessibility fixes, state management  
@@ -122,7 +122,7 @@ Frontend UI/UX, React components, responsive design.
 
 ---
 
-#### 🌊 **Tethys** (.github/agents/tethys-subagent.agent.md)
+#### 🌊 **Maat** (.github/agents/tethys-subagent.agent.md)
 Database design, SQL optimization, migration management.
 
 **When to use:** Schema design, query optimization, N+1 prevention, migration strategy  
@@ -141,7 +141,7 @@ Database design, SQL optimization, migration management.
 
 ---
 
-#### ⚙️ **Hephaestus** (.github/agents/hephaestus-subagent.agent.md)
+#### ⚙️ **Ra** (.github/agents/hephaestus-subagent.agent.md)
 Infrastructure, Docker containerization, deployment orchestration.
 
 **When to use:** Container optimization, deployment strategy, infrastructure as code, CI/CD  
@@ -162,7 +162,7 @@ Infrastructure, Docker containerization, deployment orchestration.
 
 ### Quality Assurance Tier
 
-#### ⚖️ **Tyr** (.github/agents/tyr-subagent.agent.md)
+#### ⚖️ **Temis** (.github/agents/tyr-subagent.agent.md)
 Code review, security audit, quality gates.
 
 **When to use:** Code review before merge, security scan, test coverage validation, architecture review  
@@ -220,9 +220,9 @@ Plano salvo em: plans/<feature-name>/plan.md
 
 ### Pause Point 2: Phase Implementation Review
 ```
-Hermes/Athena/Tethys implementa fase
+Hermes/Athena/Maat implementa fase
      ↓
-Tyr revisa código
+Temis revisa código
      ↓
 ⏸️  STOP: Mostrar resultado e pedir confirmação
      ↓
@@ -244,7 +244,7 @@ Proxima fase inicia
 
 ## 📋 Task Dispatch Patterns
 
-### Pattern 1: Simple Bug Fix (Apollo → Hermes → Tyr)
+### Pattern 1: Simple Bug Fix (Apollo → Hermes → Temis)
 ```
 User: /debug-issue API returns 500 on POST /users
 
@@ -261,13 +261,13 @@ User: /debug-issue API returns 500 on POST /users
    ├─ Run test → expects PASS/GREEN
    └─ Refactor and document
 
-3. Tyr reviews
+3. Temis reviews
    └─ Approve if coverage >80% + no OWASP issues
    
 ⏸️  MANDATORY STOP: User commits to git
 ```
 
-### Pattern 2: Feature Implementation (Metis → Hermes/Athena/Tethys → Tyr → Hephaestus)
+### Pattern 2: Feature Implementation (Metis → Hermes/Athena/Maat → Temis → Ra)
 ```
 User: /implement-feature Add email verification flow
 
@@ -285,22 +285,22 @@ User: /implement-feature Add email verification flow
    Phase N Implementation:
    ├─ Hermes: Write FAILING tests → minimal code → PASSING tests
    ├─ Athena: Write FAILING tests → minimal code → PASSING tests  
-   └─ Tethys: Write migration tests → minimal schema → passing tests
+   └─ Maat: Write migration tests → minimal schema → passing tests
    
    Phase N Review:
-   ├─ Tyr validates >80% coverage + OWASP compliance
+   ├─ Temis validates >80% coverage + OWASP compliance
    └─ Saved: plans/email-verification/phase-N-complete.md
    
 ⏸️  MANDATORY STOP: User commits phase (git commit)
 
 3. After all phases:
 
-4. Hephaestus updates deployment
+4. Ra updates deployment
    └─ Docker changes, env variables, health checks
    └─ Final artifact: plans/email-verification/complete.md
 ```
 
-### Pattern 3: Performance Optimization (Apollo → Tethys → Tyr)
+### Pattern 3: Performance Optimization (Apollo → Maat → Temis)
 ```
 User: /optimize-database GET /products endpoint slow
 
@@ -313,14 +313,14 @@ User: /optimize-database GET /products endpoint slow
    
    ⏸️  Apollo returns structured findings, not raw code
 
-2. Tethys analyzes (CONTEXT EFFICIENT)
+2. Maat analyzes (CONTEXT EFFICIENT)
    ├─ Runs EXPLAIN ANALYZE
    ├─ Identifies N+1 queries
    ├─ Proposes index strategy
    ├─ Writes migration test FIRST (TDD)
    └─ Implements minimal migration code
 
-3. Tyr validates
+3. Temis validates
    ├─ Benchmarks before/after
    ├─ Validates >80% test coverage
    └─ Final artifact: plans/optimize-products/complete.md
@@ -340,13 +340,13 @@ Cada agente especializado **conserva tokens** através de estratégias:
 - **Estratégia:** Busca paralela (3-10 simultâneas) retorna apenas high-signal findings
 - **Economia:** 60-70% menos tokens que raw code dump
 
-### Hermes/Athena/Tethys (Implementation)
+### Hermes/Athena/Maat (Implementation)
 - **Input:** Escopo de fase específica + tests a passar
 - **Output:** APENAS arquivos que modifica nesta fase
 - **Estratégia:** Não relê arquitetura completa, só seus arquivos
 - **Economia:** 50% menos tokens vs monolithic agent
 
-### Tyr (Review)
+### Temis (Review)
 - **Input:** Git diff (changed files only)
 - **Output:** Comments estruturados com status (APPROVED/NEEDS_REVISION/FAILED)
 - **Estratégia:** Revê apenas changed lines, não repositório inteiro
@@ -360,7 +360,7 @@ Cada agente especializado **conserva tokens** através de estratégias:
 
 ## 🎯 TDD ENFORCEMENT WORKFLOW
 
-Todos os agentes de implementação (Hermes, Athena, Tethys) seguem **RIGOROSAMENTE**:
+Todos os agentes de implementação (Hermes, Athena, Maat) seguem **RIGOROSAMENTE**:
 
 ### Phase 1: RED (Test Fails)
 ```python
@@ -473,11 +473,11 @@ Add email verification to new user registrations.
 - Frontend: components/VerificationForm.tsx, hooks/useVerification.ts
 ```
 
-### phase-N-complete.md (Criado após cada fase passar Tyr review)
+### phase-N-complete.md (Criado após cada fase passar Temis review)
 ```markdown
 # Phase 1 Complete: Database Schema
 
-**Status:** APPROVED by Tyr on Feb 5, 2026
+**Status:** APPROVED by Temis on Feb 5, 2026
 **Coverage:** 94% (exceeds 80% requirement)
 
 ## Changes
@@ -545,11 +545,11 @@ Each agent can be invoked directly for bypass orchestration:
 
 @tethys: Optimize users table queries
 
-@athena: Build ProductCard component with Storybook
+@aphrodite: Build ProductCard component with Storybook
 
 @apollo: Find all uses of deprecated api.getUsers() method
 
-@metis: Plan migration from REST to GraphQL
+@aphrodite: Plan migration from REST to GraphQL
 
 @tyr: Review this PR for security issues
 
@@ -569,7 +569,7 @@ Each agent can be invoked directly for bypass orchestration:
 | Plan architecture | metis | `/plan-architecture` |
 | Debug issue | apollo | `/debug-issue` |
 | New API endpoint | hermes | Direct: @hermes |
-| New component | athena | Direct: @athena |
+| New component | athena | Direct: @aphrodite |
 | Database optimization | tethys | `/optimize-database` |
 | Deploy changes | hephaestus | Direct: @hephaestus |
 | Code review | tyr | `/review-code` |
@@ -599,11 +599,11 @@ model: ['GPT-5 (copilot)', 'Claude Sonnet 4.5 (copilot)']
 model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Flash é rápido para buscas paralelas
 
-# Hermes/Athena/Tethys (Implementation)
+# Hermes/Athena/Maat (Implementation)
 model: ['Claude Sonnet 4.5 (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Sonnet para complexidade, fallback para Haiku (economico)
 
-# Tyr (Review)
+# Temis (Review)
 model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5 (copilot)']
 # Requer reasoning profundo para code review
 
@@ -660,7 +660,7 @@ Edit `.github/agents/zeus.agent.md` and add:
 ```
 
 ### Step 3: Register with Metis (for planning phase)
-Edit `.github/agents/metis-subagent.agent.md` and add:
+Edit `.github/agents/aphrodite-subagent.agent.md` and add:
 ```markdown
 **When researching database architecture, delegate to DatabaseExpert-subagent:**
 - Goal: Analyze current schema and identify optimization opportunities
@@ -708,14 +708,14 @@ plans/<feature-name>/
 ### Durante Implementation Phase (por phase)
 ```
 plans/<feature-name>/
-└── phase-N-complete.md  (Resultado de CADA fase após Tyr approval)
+└── phase-N-complete.md  (Resultado de CADA fase após Temis approval)
 ```
 **Contém:**
 - Phase objective e summary
 - Files created/modified
 - Tests created/passed
 - Coverage percentage
-- Tyr review result (APPROVED/NEEDS_REVISION/FAILED)
+- Temis review result (APPROVED/NEEDS_REVISION/FAILED)
 - Git commit message
 - Decisions made in this phase
 

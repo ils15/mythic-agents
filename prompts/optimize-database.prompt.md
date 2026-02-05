@@ -6,7 +6,7 @@ agent: tethys-subagent
 tools: ['search', 'usages']
 ---
 
-# Otimizar Database (Tétis)
+# Otimizar Database (Maat)
 
 ## Performance Analysis
 

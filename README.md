@@ -12,9 +12,9 @@ This is a **conductor system for 9 specialized AI agents** that work together to
 - ⚡ **Zeus** - Orchestrates all agents  
 - 🔥 **Hermes** - Writes backend code
 - 💎 **Athena** - Builds frontend components
-- 🌊 **Tethys** - Designs database schema
-- ⚖️ **Tyr** - Reviews code & enforces quality
-- ⚙️ **Hephaestus** - Handles infrastructure
+- 🌊 **Maat** - Designs database schema
+- ⚖️ **Temis** - Reviews code & enforces quality
+- ⚙️ **Ra** - Handles infrastructure
 - 📚 **Mnemosyne** - Documents everything
 - 🔍 **Apollo** - Discovers patterns in your codebase
 
@@ -57,7 +57,7 @@ Instead of one agent doing everything, you have experts:
 
 - 🔥 **Hermes** knows FastAPI async patterns, SQL optimization—not React
 - 💎 **Athena** knows React hooks, animations, accessibility—not database queries
-- 🌊 **Tethys** knows query plans, indexes, migrations—not component design
+- 🌊 **Maat** knows query plans, indexes, migrations—not component design
 
 Each agent is **world-class at ONE thing**, not okay at everything.
 
@@ -113,7 +113,7 @@ AI does the work. You keep control. You maintain git history. You approve change
 
 ```bash
 # Step 1: Ask Metis to plan
-@metis: Plan JWT authentication with refresh tokens
+@aphrodite: Plan JWT authentication with refresh tokens
 
 # Step 2: Review the plan in plans/jwt-auth/plan.md
 # Then approve: "Plan looks good!"
@@ -148,12 +148,12 @@ git commit -m "feat: Add JWT authentication"
     ↓ PHASE 1:        PHASE 2-N:           PHASE N+1:
   Planning            Implementation       Deployment
     ↓                    ↓                    ↓
-  Metis              Parallel Agents      Hephaestus
+  Metis              Parallel Agents      Ra
   Apollo (find)     ├─ Hermes (backend)   (Docker/Deploy)
   ↓                 ├─ Athena (frontend)
-  plan.md           └─ Tethys (database)
+  plan.md           └─ Maat (database)
   ↓                    ↓
-  ⏸️ PAUSE 1        Tyr (reviews)
+  ⏸️ PAUSE 1        Temis (reviews)
   (You approve)    ⏸️ PAUSE 2
                    (You review results)
                    ↓
@@ -171,9 +171,9 @@ git commit -m "feat: Add JWT authentication"
 | ⚡ **Zeus** | Orchestrator | Features spanning multiple layers | Coordinates all agents, manages pause points |
 | 🔥 **Hermes** | Backend specialist | APIs, services, business logic | FastAPI expert, async/await patterns, TDD |
 | 💎 **Athena** | Frontend specialist | UI components, React code | React expert, WCAG accessibility, responsive design |
-| 🌊 **Tethys** | Database specialist | Schema, query optimization | N+1 prevention, zero-downtime migrations, indexes |
-| ⚖️ **Tyr** | Code reviewer | Auto-invoked after each phase | Enforces >80% coverage, OWASP security, performance |
-| ⚙️ **Hephaestus** | Infrastructure | Docker, deployment, CI/CD | Multi-stage builds, zero-downtime deploys |
+| 🌊 **Maat** | Database specialist | Schema, query optimization | N+1 prevention, zero-downtime migrations, indexes |
+| ⚖️ **Temis** | Code reviewer | Auto-invoked after each phase | Enforces >80% coverage, OWASP security, performance |
+| ⚙️ **Ra** | Infrastructure | Docker, deployment, CI/CD | Multi-stage builds, zero-downtime deploys |
 | 📚 **Mnemosyne** | Memory & docs | Auto-invoked after each phase | Auto-generates artifacts (plan.md, phase-N-complete.md) |
 | 🔍 **Apollo** | Code discoverer | Finding existing patterns | Parallel search (up to 10 simultaneous) |
 
@@ -183,7 +183,7 @@ git commit -m "feat: Add JWT authentication"
 
 ### Your Request
 ```
-@metis: Plan email verification flow with JWT expiry
+@aphrodite: Plan email verification flow with JWT expiry
 
 Requirements:
 - User registration sends verification email
@@ -195,9 +195,9 @@ Requirements:
 
 ### Phase 1: Database Schema
 
-**Time:** 1-2 hours | **Owner:** Tethys
+**Time:** 1-2 hours | **Owner:** Maat
 
-Tethys implements:
+Maat implements:
 - Create `VerificationCode` table (UUID, expires_at, attempted_at)
 - Add `verified_at` column to `User` table
 - Create indexes for performance
@@ -205,7 +205,7 @@ Tethys implements:
 
 **Tests:** All 4 passing ✅  
 **Coverage:** 100% ✅  
-**Tyr Review:** APPROVED ✅
+**Temis Review:** APPROVED ✅
 
 ### Phase 2: Backend Services
 
@@ -221,7 +221,7 @@ Hermes implements (in parallel while you review Phase 1):
 **Tests:** 12/12 passing ✅  
 **Coverage:** 94% ✅  
 **Security:** OWASP compliance ✅  
-**Tyr Review:** APPROVED ✅
+**Temis Review:** APPROVED ✅
 
 ### Phase 3: Frontend Form
 
@@ -237,7 +237,7 @@ Athena implements (in parallel):
 **Tests:** 8/8 passing ✅  
 **Coverage:** 92% ✅  
 **Accessibility:** WCAG AAA 98/100 ✅  
-**Tyr Review:** APPROVED ✅
+**Temis Review:** APPROVED ✅
 
 ### Final Summary
 
@@ -339,7 +339,7 @@ Each agent gets:
 @hermes: Create POST /products endpoint with pagination
 
 # Just need frontend optimization?
-@athena: Refactor ProductCard component for performance
+@aphrodite: Refactor ProductCard component for performance
 
 # Just need database optimization?
 @tethys: Optimize users table queries (N+1 detection)
@@ -484,9 +484,9 @@ Yes. Read `AGENTS.md` for architecture, then modify individual `.agent.md` files
 
 All documented with `plans/[feature]/` artifacts.
 
-### "What if I disagree with Tyr's code review?"
+### "What if I disagree with Temis's code review?"
 
-You can override Tyr and proceed anyway at Pause Point 2. But if coverage <80% it's blocked automatically. This is by design—production quality matters.
+You can override Temis and proceed anyway at Pause Point 2. But if coverage <80% it's blocked automatically. This is by design—production quality matters.
 
 ---
 
@@ -505,7 +505,7 @@ You can override Tyr and proceed anyway at Pause Point 2. But if coverage <80% i
 - **"I want to add JWT auth"** → Use Quick Start section above
 - **"I need to optimize database queries"** → `@tethys: [optimize task]`
 - **"I need feedback on my code"** → `@tyr: Review [file] for [concern]`
-- **"I don't know where to start"** → Start with `@metis: Plan [feature]`
+- **"I don't know where to start"** → Start with `@aphrodite: Plan [feature]`
 
 ---
 
@@ -514,4 +514,4 @@ You can override Tyr and proceed anyway at Pause Point 2. But if coverage <80% i
 **Status:** Production Ready  
 **MIT License:** Free to use, modify, distribute
 
-Ready to build faster? → `@metis: Plan [your feature]` 🚀
+Ready to build faster? → `@aphrodite: Plan [your feature]` 🚀

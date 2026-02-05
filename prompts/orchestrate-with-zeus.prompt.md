@@ -14,7 +14,7 @@ When invoked with a feature request like `@zeus: Implement [feature description]
 ```
 YOU:      Receive feature request
    ↓
-DELEGATE: @metis: Plan architecture for [feature]
+DELEGATE: @aphrodite: Plan architecture for [feature]
    ↓
 RECEIVE:  plans/[feature]/plan.md (3-10 phases)
    ↓
@@ -72,7 +72,7 @@ USER: git commit
 
 #### When to Delegate to Metis (Planning)
 ```
-Invoke: @metis: Plan [architecture/design] for [feature description]
+Invoke: @aphrodite: Plan [architecture/design] for [feature description]
 
 Provide context that includes:
 - Feature overview
@@ -124,7 +124,7 @@ Wait for: Code + tests with:
 
 #### When to Delegate to Athena (Frontend)
 ```
-Invoke: @athena: Build [component/page] following TDD
+Invoke: @aphrodite: Build [component/page] following TDD
 
 Provide context:
 - Component requirements

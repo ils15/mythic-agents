@@ -6,40 +6,40 @@ agent: zeus
 tools: ['search', 'usages', 'edit', 'runCommands', 'runTasks']
 ---
 
-# Implementar Feature com TDD (Zeus Orchestration)
+# Implement Feature with TDD (Zeus Orchestration)
 
-## Workflow Completo (5 Fases)
+## Complete Workflow (5 Phases)
 
-### Fase 1 - Planning (@Métis)
-Use @metis-subagent para:
-- Pesquisar arquitetura existente
-- Criar plano TDD detalhado 3-10 fases
-- Analisar riscos e mitigações
-- Oferecer handoff automático
+### Phase 1 - Planning (@Metis)
+Use @aphrodite-subagent to:
+- Research existing architecture
+- Create detailed TDD plan (3-10 phases)
+- Analyze risks and mitigations
+- Offer automatic handoff
 
-### Fase 2 - Parallel Implementation
-Confira qual combinar (backend, frontend, database):
+### Phase 2 - Parallel Implementation
+Check which to combine (backend, frontend, database):
 - @hermes-subagent → Backend APIs & services (FastAPI)
-- @afrodite-subagent → Frontend components (React/TypeScript)
-- @tethys-subagent → Database migrations (SQLAlchemy)
+- @aphrodite-subagent → Frontend components (React/TypeScript)
+- @maat-subagent → Database migrations (SQLAlchemy)
 
-**Executar em paralelo!** Isso reduz tempo em 60%.
+**Execute in parallel!** This reduces time by 60%.
 
-### Fase 3 - Quality Gate (@Têmis)
-- Revisar APENAS arquivos alterados
-- Verificar: OWASP Top 10, cobertura >80%, TDD seguido
-- Retornar: APPROVED | NEEDS_REVISION | FAILED
+### Phase 3 - Quality Gate (@Temis)
+- Review ONLY changed files
+- Check: OWASP Top 10, coverage >80%, TDD followed
+- Return: APPROVED | NEEDS_REVISION | FAILED
 
-### Fase 4 - Integration Testing
-- Testar workflows end-to-end
-- Verificar data consistency
+### Phase 4 - Integration Testing
+- Test end-to-end workflows
+- Verify data consistency
 - Performance testing
 
-### Fase 5 - Deployment (@Rá)
-- Deploy para staging
+### Phase 5 - Deployment (@Ra)
+- Deploy to staging
 - Health checks
 - Smoke tests
-- Deploy para production
+- Deploy to production
 
 ## Success Criteria
 ✅ Tests pass (>80% coverage)
@@ -50,6 +50,6 @@ Confira qual combinar (backend, frontend, database):
 ✅ Deployed successfully
 
 ## When to Use
-- Implementar nova feature complexa
-- Quando você quer QA automático
-- Para coordenar trabalho paralelo
+- Implement new complex feature
+- When you want automatic QA
+- To coordinate parallel work

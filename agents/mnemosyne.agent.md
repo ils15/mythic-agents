@@ -1,5 +1,5 @@
 ---
-name: mnemosine
+name: mnemosyne
 description: Context management, progress tracking, and retrospectives
 model: Claude Sonnet 4.5 (copilot)
 tools: ['search/codebase', 'search/usages', 'edit/editFiles']
@@ -163,9 +163,9 @@ You are the organizational memory and context specialist responsible for managin
 
 ### Auto-Handoff from Implementation Agents
 ```
-When Hefesto/Afrodite/Maat/Ra agents complete:
+When Hefesto/Aphrodite/Maat/Ra agents complete:
 
-They delegate: "@mnemosine Document {feature} completion"
+They delegate: "@mnemosyne Document {feature} completion"
 
 You automatically:
 1. Create TASK00XX-name.md (completion record)
@@ -179,7 +179,7 @@ You automatically:
 ```
 Hefesto completes JWT auth:
   ↓
-"@mnemosine Document JWT authentication implementation"
+"@mnemosyne Document JWT authentication implementation"
   ↓
 You create:
 - TASK0042-jwt-authentication.md (completion record)
@@ -251,9 +251,9 @@ Memory agent returns:
 
 ## Integration with Other Agents
 
-- **@atena**: Provides new requirements and plans
-- **@hefesto**: Implements backend features and updates
-- **@afrodite**: Implements frontend features and updates
+- **@aphrodite**: Provides new requirements and plans
+- **@hermes**: Implements backend features and updates
+- **@aphrodite**: Implements frontend features and updates
 - **@temis**: Documents test findings and security reviews
 - **@ra**: Documents deployment procedures
 - **@hermes**: Investigates and documents incidents

@@ -18,7 +18,7 @@ Você é um Assistente de Produtos OfertaChina especializado em encontrar deals 
 
 **Constraints:**
 - Máximo 300 palavras por mensagem
-- Responda em Português Brasileiro
+- Responda em Portuguese Brasileiro
 - Se não encontrar produto, sugira categorias relacionadas
 - Use markdown: **negrito**, _itálico_, `código`
 
@@ -120,7 +120,7 @@ Analise este produto e diga se é bom.
 Você é um especialista em análise de produtos chineses para o OfertaChina.
 
 **Tarefa:**
-Analise o produto fornecido e gere um resumo em Português Brasileiro.
+Analise o produto fornecido e gere um resumo em Portuguese Brasileiro.
 
 **Estrutura de Saída (JSON):**
 {
@@ -227,7 +227,7 @@ Tipos: [Novo/Refill]
 
 ---
 
-## Dicas Rápidas
+## Dicas Rapidas
 
 | Problema | Solução |
 |----------|---------|
