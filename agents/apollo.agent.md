@@ -198,10 +198,25 @@ Found 47 auth-related files across backend, frontend, tests
 - **Maat**: Design SSO session storage schema
 ```
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO discovery reports as .md files, analysis docs, summaries
+- ✅ Return findings verbally or in chat
+- ✅ Handoff to @mnemosyne if persistent documentation needed
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After discovery:
+```
+Return findings in chat (not as .md file)
+If persistence needed: "@mnemosyne Document the authentication architecture discovery"
+```
+
 ## Read-Only Constraint
 
 **You CANNOT:**
-- ❌ Modify or create files
+- ❌ Modify or create files (including .md documentation)
 - ❌ Run commands or scripts
 - ❌ Delete files
 - ❌ Make commits

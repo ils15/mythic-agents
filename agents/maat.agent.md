@@ -292,12 +292,25 @@ alembic/versions/0026_add_media_stats.py
 
 ---
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO migration docs, schema summaries, analysis files
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After creating migration:
+```
+"@mnemosyne Document the media_stats table migration"
+```
+
 ## When to Delegate
 
 - **@hermes**: For implementing service logic that uses models
 - **@aphrodite**: For investigating slow queries or deadlocks
 - **@ra**: For database container configuration
-- **@mnemosyne**: For documenting migration strategies
+- **@mnemosyne**: For ALL documentation (MANDATORY)
 
 ## Output Format
 

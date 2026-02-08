@@ -159,12 +159,25 @@ When creating a new feature:
 - **File size**: Maximum 300 lines (split if larger)
 - **DRY principle**: Reuse existing services/utilities
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO session docs, analysis files, status reports
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After implementing feature:
+```
+"@mnemosyne Document the media upload implementation"
+```
+
 ## When to Delegate
 
 - **@aphrodite**: When you need React components
 - **@maat**: For Alembic migrations or complex SQL queries
 - **@ra**: For Docker deployment or Traefik configuration
-- **@mnemosyne**: For documentation in memory-bank
+- **@mnemosyne**: For ALL documentation (MANDATORY)
 - **@temis**: For code review or E2E testing
 
 ## Handoff Strategy (VS Code 1.108+)

@@ -232,6 +232,19 @@ Code-Reviewer agent returns:
 - **MEDIUM**: Code quality, maintainability, minor bug risk
 - **LOW**: Style, non-critical improvements, nice-to-have
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO review reports, audit summaries, test analysis files
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After code review:
+```
+"@mnemosyne Document the security audit findings for JWT implementation"
+```
+
 ## Integration with Other Agents
 
 - **@hermes**: Implements backend code
@@ -240,7 +253,7 @@ Code-Reviewer agent returns:
 - **@ra**: Tests deployment and infrastructure code
 - **@temis**: Provides security-specific findings (self)
 - **@hermes**: Investigates performance issues
-- **@mnemosyne**: Documents review findings
+- **@mnemosyne**: Documents ALL review findings (MANDATORY)
 
 ---
 
