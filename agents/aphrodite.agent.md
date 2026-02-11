@@ -256,12 +256,25 @@ Next: Integrate API endpoints
 
 ---
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO component docs, implementation summaries, session files
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After building components:
+```
+"@mnemosyne Document the MediaManager component implementation"
+```
+
 ## When to Delegate
 
 - **@hermes**: When you need new API endpoints
 - **@ra**: For Vite configuration or Docker deployment
 - **@temis**: For Playwright E2E tests and accessibility audit
-- **@mnemosyne**: For documentation in memory-bank
+- **@mnemosyne**: For ALL documentation (MANDATORY)
 
 ## Output Format
 

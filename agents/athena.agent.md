@@ -295,6 +295,19 @@ For parallel discovery without context contamination:
 
 ---
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO planning docs, research summaries, RCA reports
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After planning:
+```
+"@mnemosyne Document the JWT authentication architecture decision"
+```
+
 ## Key Principles
 
 1. **Always Research First**: No planning without understanding codebase
@@ -304,6 +317,7 @@ For parallel discovery without context contamination:
 5. **Clear Handoff**: Plan is ready for @Orchestrator execution
 6. **Parallel Execution**: Use multiple Explorers for speed
 7. **Web Research Integration**: Fetch standards, best practices, specs when needed
+8. **Documentation via Mnemosyne**: Never create .md files yourself
 
 ---
 

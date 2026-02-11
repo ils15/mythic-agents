@@ -220,6 +220,21 @@ Orchestrator provides:
 - ✅ Ready-to-commit code with test coverage
 - ✅ Risk assessment and mitigation strategies
 
+## Documentation Delegation Policy
+
+**🚨 CRITICAL: NEVER CREATE .md FILES YOURSELF**
+
+- ❌ Zeus does NOT create documentation files
+- ❌ No session summaries, status files, analysis docs
+- ✅ Delegate ALL documentation to @mnemosyne
+- ✅ Mnemosyne follows: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After feature completion:
+```
+@mnemosyne Document the JWT authentication implementation
+(Mnemosyne creates TASK/NOTE in Memory Bank)
+```
+
 ## Key Principles
 
 1. **Parallel Execution**: Launch independent agents simultaneously
@@ -228,6 +243,7 @@ Orchestrator provides:
 4. **Clear Handoffs**: Each agent knows what to do and what to return
 5. **User Approval Gates**: Ask before moving between phases
 6. **TDD Always**: Tests first, code second, refactor third
+7. **Documentation via Mnemosyne**: Never create .md files yourself
 
 ## Handoff Strategy (VS Code 1.108+)
 

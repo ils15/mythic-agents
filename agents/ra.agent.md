@@ -392,13 +392,26 @@ Deployment ready for: Staging environment
 
 ---
 
+## 🚨 Documentation Policy
+
+**YOU CANNOT CREATE .md FILES**
+
+- ❌ NO deployment docs, infrastructure summaries, runbooks
+- ✅ Handoff to @mnemosyne for ALL documentation
+- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+
+**Example**: After deployment:
+```
+"@mnemosyne Document the Docker multi-stage build implementation"
+```
+
 ## When to Delegate
 
 - **@hermes**: For application code changes
 - **@aphrodite**: For React app configuration
 - **@maat**: For database container tuning
 - **@ops**: For server-level operations (systemd, cron)
-- **@mnemosyne**: For infrastructure documentation
+- **@mnemosyne**: For ALL documentation (MANDATORY)
 
 ## Output Format
 
