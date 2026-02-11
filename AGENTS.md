@@ -216,11 +216,11 @@ The Zeus system is controlled by the user through **MANDATORY PAUSE POINTS** at 
 
 ### Pause Point 1: Planning Approval
 ```
-Athena creates detailed plan
+Athena creates concise plan (in CHAT, not file)
      ↓
 ⏸️  STOP: User reviews and approves plan
      ↓
-Plan saved in: plans/<feature-name>/plan.md
+Plan presented in chat (no files created unless requested)
 ```
 
 ### Pause Point 2: Phase Implementation Review
@@ -229,21 +229,21 @@ Hermes/Aphrodite/Maat implements phase
      ↓
 Temis reviews code
      ↓
-⏸️  STOP: Show result and ask for confirmation
+⏸️  STOP: Show result summary in chat
      ↓
-Result saved in: plans/<feature-name>/phase-N-complete.md
+No phase-N-complete.md created (info stays in git commits)
 ```
 
 ### Pause Point 3: Git Commit
 ```
-Zeus generates commit message
+Agent provides commit message suggestion
      ↓
 ⏸️  STOP: User executes "git commit" manually
      ↓
 Next phase starts
 ```
 
-**Benefit:** You maintain control and can interrupt at any time.
+**Benefit:** You maintain control and can interrupt at any time. **No file bloat.**
 
 ---
 
@@ -276,14 +276,13 @@ User: /debug-issue API returns 500 on POST /users
 ```
 User: /implement-feature Add email verification flow
 
-1. Athena plans (triggers via /plan-architecture if needed)
+1. Athena plans (concise, 3-5 phases)
    ├─ Design database schema
    ├─ Design API endpoints
    ├─ Design frontend components
-   └─ Create TDD roadmap with 3-10 phases
+   └─ Present plan IN CHAT (no plan.md file)
    
-⏸️  MANDATORY STOP: User approves plan
-   └─ Saved: plans/email-verification/plan.md
+⏸️  MANDATORY STOP: User approves plan in chat
 
 2. For each phase (Parallel execution allowed):
    
@@ -294,15 +293,15 @@ User: /implement-feature Add email verification flow
    
    Phase N Review:
    ├─ Temis validates >80% coverage + OWASP compliance
-   └─ Saved: plans/email-verification/phase-N-complete.md
+   └─ Summary presented IN CHAT (no phase-N-complete.md)
    
 ⏸️  MANDATORY STOP: User commits phase (git commit)
 
 3. After all phases:
+   └─ Summary presented IN CHAT (no complete.md)
 
-4. Ra updates deployment
+4. Ra updates deployment (if needed)
    └─ Docker changes, env variables, health checks
-   └─ Final artifact: plans/email-verification/complete.md
 ```
 
 ### Pattern 3: Performance Optimization (Apollo → Maat → Temis)
@@ -316,7 +315,7 @@ User: /optimize-database GET /products endpoint slow
    ├─ N+1 patterns
    └─ Cache usage
    
-   ⏸️  Apollo returns structured findings, not raw code
+   ⏸️  Apollo returns structured findings IN CHAT, not raw code
 
 2. Maat analyzes (CONTEXT EFFICIENT)
    ├─ Runs EXPLAIN ANALYZE
@@ -328,7 +327,7 @@ User: /optimize-database GET /products endpoint slow
 3. Temis validates
    ├─ Benchmarks before/after
    ├─ Validates >80% test coverage
-   └─ Final artifact: plans/optimize-products/complete.md
+   └─ Summary presented IN CHAT (no artifact files)
    
 ⏸️  MANDATORY STOP: User commits to git
 ```
@@ -430,113 +429,54 @@ class User:
 
 ---
 
-## 📁 PLAN DIRECTORY STRUCTURE
+## � DOCUMENTATION PHILOSOPHY: MINIMAL & IN-CODE
 
-Each feature creates a documented directory:
+🚨 **CRITICAL RULE**: **NO excessive file creation**. Information lives in:
+1. **Git commits** (what changed and why)
+2. **Code comments** (complex logic only)
+3. **Tests** (behavior documentation)
+4. **README updates** (if feature changes usage)
 
+### ❌ DO NOT CREATE:
+- `plan.md` files (present plans in chat)
+- `phase-N-complete.md` files (info in git commits)
+- `complete.md` files (info in git history)
+- Excessive documentation artifacts
+- Status tracking files
+
+### ✅ DOCUMENTATION RULES:
+1. **Plans**: Present in CHAT, get approval, proceed
+2. **Progress**: Track via git commits with descriptive messages
+3. **Completion**: Summary in CHAT, no files created
+4. **Decisions**: Captured in commit messages and code comments
+
+### Example Workflow (NO files created):
 ```
-plans/
-├── .gitignore          # Ignore plans by default
-├── README.md          # How to use plan directory
-│
-└── <feature-name>/
-    ├── plan.md        # Plan approved by user
-    ├── phase-1-complete.md
-    ├── phase-2-complete.md
-    ├── phase-3-complete.md
-    └── complete.md    # Final summary
-```
+1. Athena presents plan in chat:
+   📋 Plan: Email Verification (3 phases)
+   1️⃣ Database schema
+   2️⃣ API endpoints  
+   3️⃣ Frontend components
+   
+   User: ✅ Approved
 
-### plan.md (Created by Athena, Approved by User)
-```markdown
-# Feature: Email Verification Flow
+2. Hermes implements Phase 1
+   → Creates code + tests
+   → Temis reviews
+   → Suggests commit: "feat: add verification schema"
+   → User commits
+   
+3. Continue phases...
 
-**Status:** APPROVED by user on Feb 5, 2026
-
-## Overview
-Add email verification to new user registrations.
-
-## Phases (3 total)
-
-### Phase 1: Database Schema
-- Create VerificationCode table with TTL
-- Add verified_at field to User
-- Tests first: validation, TTL expiry
-
-### Phase 2: Email Service
-- Create EmailService for sending
-- Create VerifyEmail handler
-- Tests: happy path, error handling
-
-### Phase 3: Frontend Integration
-- Create VerificationForm component
-- Create ResendEmail button
-- Tests: form submission, error display
-
-## Files Affected
-- Backend: models/User, models/VerificationCode, services/email.py
-- Frontend: components/VerificationForm.tsx, hooks/useVerification.ts
-```
-
-### phase-N-complete.md (Created after each phase passes Temis review)
-```markdown
-# Phase 1 Complete: Database Schema
-
-**Status:** APPROVED by Temis on Feb 5, 2026
-**Coverage:** 94% (exceeds 80% requirement)
-
-## Changes
-- ✅ Created models/VerificationCode.py
-- ✅ Modified models/User.py (added verified_at field)
-- ✅ Created migrations/002_add_verification.py
-
-## Tests Added
-- test_verification_code_creation
-- test_verification_code_expiry
-- test_user_verified_at_field
-
-## Git Commit
-```
-feat: Add email verification database schema
-
-- Create VerificationCode model with 24h TTL
-- Add verified_at timestamp to User
-- Implement comprehensive tests (94% coverage)
+4. Final summary in CHAT:
+   ✅ Feature Complete
+   - 3 phases done
+   - 92% coverage
+   - 7 files modified
+   Ready to deploy!
 ```
 
-## Decisions Made
-- Used UUID for verification codes (not sequential integers)
-- TTL enforced by trigger, not application logic
-```
-
-### complete.md (Final summary after all phases)
-```markdown
-# Feature Complete: Email Verification Flow
-
-**Total Phases Completed:** 3  
-**Total Coverage:** 92%  
-**Total Files Modified:** 7  
-**Total Time:** ~2 hours agent time  
-
-## Phases
-- ✅ Phase 1: Database Schema
-- ✅ Phase 2: Email Service
-- ✅ Phase 3: Frontend Integration
-
-## Files Impacted
-- models/User.py
-- models/VerificationCode.py
-- services/EmailService.py
-- components/VerificationForm.tsx
-- hooks/useVerification.ts
-- migrations/002_add_verification.py
-- tests/test_verification.py
-
-## Next Steps
-- [ ] Deploy to staging
-- [ ] QA testing with real emails
-- [ ] Deploy to production
-```
+**Benefit**: Clean repo, no documentation bloat, all info in git history.
 
 ---
 
@@ -584,20 +524,22 @@ Each agent can be invoked directly for bypass orchestration:
 
 ---
 
-## 🎯 MODEL FALLBACK STRATEGY
+## 🎯 MODEL STRATEGY
 
-Each agent supports multiple models with automatic fallback:
+Each agent uses optimized models for their role:
 
 ```yaml
 # Zeus (Orchestrator)
-model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5 (copilot)']
-# Prioritizes the most capable, fallback if unavailable
+model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
+# Opus for complex orchestration, Sonnet fallback
 
 # Athena (Planning)
-model: ['GPT-5 (copilot)', 'Claude Sonnet 4.5 (copilot)']
-# GPT-5 better for reasoning in planning
+model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
+# Opus for strategic planning and deep research
 
 # Apollo (Discovery)
+model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
+# Flash for fast parallel searches
 model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Flash is fast for parallel searches
 
