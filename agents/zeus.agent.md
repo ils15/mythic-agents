@@ -108,7 +108,7 @@ Full debugging guide with 7-step process in documentation.
 ## Available Subagents
 
 ### 1. Planner-Architect (ATENA) - THE STRATEGIC PLANNER
-- **Model**: GPT-5.2 High (copilot)
+- **Model**: Claude Opus 4.6 (copilot)
 - **Role**: Strategic planning, TDD-driven plans, RCA analysis, deep research
 - **Use for**: Feature planning, architectural decisions, root cause analysis
 - **Returns**: Comprehensive implementation plans with risk analysis
@@ -121,7 +121,7 @@ Full debugging guide with 7-step process in documentation.
 - **Special**: Launches 3-10 parallel searches simultaneously
 
 ### 3. Hefesto (BACKEND-IMPLEMENTER) - THE BACKEND DEVELOPER
-- **Model**: Claude Sonnet 4.5 (copilot)
+- **Model**: GPT-5.3-Codex (copilot)
 - **Role**: FastAPI endpoints, services, routers implementation
 - **Use for**: Backend code execution following TDD
 - **Returns**: Tested, production-ready code
@@ -133,13 +133,13 @@ Full debugging guide with 7-step process in documentation.
 - **Returns**: Complete React/TypeScript components with tests
 
 ### 5. Temis (CODE-REVIEWER) - THE QUALITY GATE
-- **Model**: GPT-5.2 (copilot)
+- **Model**: Claude Sonnet 4.5 (copilot) + GPT-5.3-Codex (copilot)
 - **Role**: Code correctness, quality, test coverage validation
 - **Use for**: Reviewing implementations before shipping
 - **Returns**: APPROVED / NEEDS_REVISION / FAILED with structured feedback
 
 ### 6. Maat (DATABASE-IMPLEMENTER) - THE DATABASE DEVELOPER
-- **Model**: Claude Sonnet 4.5 (copilot)
+- **Model**: Claude Sonnet 4.5 (copilot) + GPT-5.3-Codex (copilot)
 - **Role**: Alembic migrations, schema design, query optimization
 - **Use for**: Database changes, migrations, performance analysis
 - **Returns**: Migration files, schema changes, performance reports
@@ -343,7 +343,7 @@ Your orchestration creates traceable sessions:
 Switch models mid-orchestration:
 ```
 /switch-model claude-opus          # For better planning
-/switch-model gpt-5.2              # For code review
+/switch-model gpt-5.3-codex        # For backend/refactors/review
 ```
 
 ---

@@ -535,28 +535,39 @@ model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
 
 # Athena (Planning)
 model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
-# Opus for strategic planning and deep research
+# Opus for strategic planning, long multi-step decomposition, and high-agency workflows
 
 # Apollo (Discovery)
 model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Flash for fast parallel searches
-model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
-# Flash is fast for parallel searches
 
-# Hermes/Aphrodite/Maat (Implementation)
-model: ['Claude Sonnet 4.5 (copilot)', 'Claude Haiku 4.5 (copilot)']
-# Sonnet for complexity, fallback to Haiku (economical)
+# Hermes (Backend)
+model: ['GPT-5.3-Codex (copilot)', 'Claude Sonnet 4.5 (copilot)']
+# Codex for heavy backend refactors, security-sensitive implementation, and test-first execution
+
+# Aphrodite (Frontend)
+model: ['Gemini 3 Pro (Preview) (copilot)', 'Claude Sonnet 4.5 (copilot)']
+# Gemini 3 Pro for fast UI iteration and visual/layout-heavy tasks
+
+# Maat (Database)
+model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5.3-Codex (copilot)']
+# Sonnet for schema/migration reasoning, Codex fallback for complex SQL/refactor changes
 
 # Temis (Review)
-model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5 (copilot)']
-# Requires deep reasoning for code review
+model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5.3-Codex (copilot)']
+# Sonnet for broad review, Codex for deep technical/security checks
 
 # Mnemosyne (Memory)
 model: ['Claude Haiku 4.5 (copilot)']  
 # Haiku is sufficient for documentation
 ```
 
-**Benefit:** If main model is unavailable, system uses fallback automatically.
+**Changelog-aligned notes (VS Code 1.110):**
+- Keep `model` in each `.agent.md` frontmatter for per-agent routing.
+- Use subagent streaming/progress and prompt queuing for long workflows.
+- Compact context and prefer file-backed large outputs when sessions grow.
+
+**Benefit:** Better role specialization with deterministic fallback when the primary model is unavailable.
 
 ---
 

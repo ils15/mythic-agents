@@ -2,7 +2,7 @@
 name: temis
 description: Code review specialist - quality validation, correctness, test coverage analysis, security audits (consolidated from code-reviewer + security-specialist)
 argument-hint: "What code should be reviewed and validated (changed files, test coverage, security)"
-model: [GPT-5.2-Codex (copilot), Gemini 3 Pro (Preview) (copilot)]
+model: [Claude Sonnet 4.5 (copilot), GPT-5.3-Codex (copilot)]
 tools: ['search/codebase', 'search/usages', 'edit/editFiles']
 agents: []
 ---
