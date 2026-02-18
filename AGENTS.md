@@ -542,8 +542,8 @@ model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Flash for fast parallel searches
 
 # Hermes (Backend)
-model: ['GPT-5.3-Codex (copilot)', 'Claude Sonnet 4.6 (copilot)']
-# Codex for heavy backend refactors, security-sensitive implementation, and test-first execution
+model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']
+# Sonnet for production-grade backend code, Codex fallback for heavy refactors and security-sensitive implementation
 
 # Aphrodite (Frontend)
 model: ['Gemini 3 Pro (Preview) (copilot)', 'Claude Sonnet 4.6 (copilot)']

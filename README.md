@@ -355,7 +355,7 @@ Each agent gets:
 
 System uses role-based model assignment in each `.agent.md` frontmatter:
 - Zeus/Athena: Claude Opus 4.6 (planning/orchestration)
-- Hermes: GPT-5.3-Codex (backend-heavy implementation)
+- Hermes: Claude Sonnet 4.6 with GPT-5.3-Codex fallback (backend implementation)
 - Aphrodite: Gemini 3 Pro (Preview) (frontend/UI speed)
 - Maat/Temis: Claude Sonnet 4.6 with GPT-5.3-Codex fallback (DB/review depth)
 
