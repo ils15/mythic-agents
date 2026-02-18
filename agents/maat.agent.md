@@ -2,7 +2,7 @@
 name: maat
 description: Database specialist - schema design, migrations, query optimization, SQLAlchemy, Alembic
 argument-hint: "What database task to perform (migrations, schema, optimization, query analysis)"
-model: [Claude Sonnet 4.5 (copilot), GPT-5.3-Codex (copilot)]
+model: [Claude Sonnet 4.6 (copilot), GPT-5.3-Codex (copilot)]
 tools: ['search/codebase', 'search/usages', 'edit/editFiles', 'execute/runInTerminal', 'execute/runTask']
 agents: []
 ---

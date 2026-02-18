@@ -530,11 +530,11 @@ Each agent uses optimized models for their role:
 
 ```yaml
 # Zeus (Orchestrator)
-model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
+model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 # Opus for complex orchestration, Sonnet fallback
 
 # Athena (Planning)
-model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
+model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 # Opus for strategic planning, long multi-step decomposition, and high-agency workflows
 
 # Apollo (Discovery)
@@ -542,19 +542,19 @@ model: ['Gemini 3 Flash (copilot)', 'Claude Haiku 4.5 (copilot)']
 # Flash for fast parallel searches
 
 # Hermes (Backend)
-model: ['GPT-5.3-Codex (copilot)', 'Claude Sonnet 4.5 (copilot)']
+model: ['GPT-5.3-Codex (copilot)', 'Claude Sonnet 4.6 (copilot)']
 # Codex for heavy backend refactors, security-sensitive implementation, and test-first execution
 
 # Aphrodite (Frontend)
-model: ['Gemini 3 Pro (Preview) (copilot)', 'Claude Sonnet 4.5 (copilot)']
+model: ['Gemini 3 Pro (Preview) (copilot)', 'Claude Sonnet 4.6 (copilot)']
 # Gemini 3 Pro for fast UI iteration and visual/layout-heavy tasks
 
 # Maat (Database)
-model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5.3-Codex (copilot)']
+model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']
 # Sonnet for schema/migration reasoning, Codex fallback for complex SQL/refactor changes
 
 # Temis (Review)
-model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5.3-Codex (copilot)']
+model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']
 # Sonnet for broad review, Codex for deep technical/security checks
 
 # Mnemosyne (Memory)
@@ -566,6 +566,9 @@ model: ['Claude Haiku 4.5 (copilot)']
 - Keep `model` in each `.agent.md` frontmatter for per-agent routing.
 - Use subagent streaming/progress and prompt queuing for long workflows.
 - Compact context and prefer file-backed large outputs when sessions grow.
+
+**Changelog-aligned note (GitHub Copilot 2026):**
+- If using Copilot Coding Agent on managed/self-hosted runners, validate network routing endpoints by plan (`api.business.githubcopilot.com` / `api.enterprise.githubcopilot.com`) before rollout.
 
 **Benefit:** Better role specialization with deterministic fallback when the primary model is unavailable.
 
@@ -584,7 +587,7 @@ name: database-expert
 user-invokable: false  # Only for internal delegation
 description: Specialized database architect and query optimizer
 argument-hint: "Analyze and optimize database schema and queries"
-model: ['Claude Sonnet 4.5 (copilot)', 'GPT-5 (copilot)']
+model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']
 tools: ['search', 'usages', 'edit', 'runCommands']
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: mnemosyne
 description: Context management, progress tracking, and retrospectives
-model: Claude Sonnet 4.5 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 tools: ['search/codebase', 'search/usages', 'edit/editFiles']
 agents: []
 argument-hint: "What project context or decision should be documented (task completion, architecture decision)"

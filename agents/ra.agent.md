@@ -2,7 +2,7 @@
 name: ra
 description: Infrastructure implementation specialist - Docker, deployment, CI/CD, monitoring, scaling
 argument-hint: "What infrastructure task to perform (Docker, deployment, CI/CD, monitoring, scaling)"
-model: Claude Sonnet 4.5 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 tools: ['search/codebase', 'search/usages', 'edit/editFiles', 'execute/runInTerminal', 'execute/runTask']
 agents: []
 ---

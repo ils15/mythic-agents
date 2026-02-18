@@ -357,9 +357,11 @@ System uses role-based model assignment in each `.agent.md` frontmatter:
 - Zeus/Athena: Claude Opus 4.6 (planning/orchestration)
 - Hermes: GPT-5.3-Codex (backend-heavy implementation)
 - Aphrodite: Gemini 3 Pro (Preview) (frontend/UI speed)
-- Maat/Temis: Claude Sonnet 4.5 with GPT-5.3-Codex fallback (DB/review depth)
+- Maat/Temis: Claude Sonnet 4.6 with GPT-5.3-Codex fallback (DB/review depth)
 
 This follows recent VS Code agent-mode guidance: per-agent model selection, visible subagent progress, prompt queueing, and context compaction for long workflows.
+
+For orgs using Copilot Coding Agent with managed/self-hosted runners, also validate 2026 GitHub routing endpoint requirements by plan before production rollout.
 
 You don't need to do anything—it's automatic.
 

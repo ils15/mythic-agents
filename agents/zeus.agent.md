@@ -2,7 +2,7 @@
 name: zeus
 description: Main conductor - ONLY orchestrates and delegates, never implements. Coordinates specialized agents through development lifecycle
 argument-hint: "What development phase to orchestrate (planning, implementation, review, deployment)"
-model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.5 (copilot)']
+model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'vscode/runCommand', 'vscode/switchAgent', 'execute/runInTerminal', 'execute/runTask', 'read/readFile', 'search/codebase', 'search/usages', 'web/fetch', 'mcp_perplexity-as_perplexity_ask']
 agents: ['athena', 'apollo', 'hermes', 'aphrodite', 'maat', 'ra', 'temis', 'mnemosyne']
 ---
@@ -133,19 +133,19 @@ Full debugging guide with 7-step process in documentation.
 - **Returns**: Complete React/TypeScript components with tests
 
 ### 5. Temis (CODE-REVIEWER) - THE QUALITY GATE
-- **Model**: Claude Sonnet 4.5 (copilot) + GPT-5.3-Codex (copilot)
+- **Model**: Claude Sonnet 4.6 (copilot) + GPT-5.3-Codex (copilot)
 - **Role**: Code correctness, quality, test coverage validation
 - **Use for**: Reviewing implementations before shipping
 - **Returns**: APPROVED / NEEDS_REVISION / FAILED with structured feedback
 
 ### 6. Maat (DATABASE-IMPLEMENTER) - THE DATABASE DEVELOPER
-- **Model**: Claude Sonnet 4.5 (copilot) + GPT-5.3-Codex (copilot)
+- **Model**: Claude Sonnet 4.6 (copilot) + GPT-5.3-Codex (copilot)
 - **Role**: Alembic migrations, schema design, query optimization
 - **Use for**: Database changes, migrations, performance analysis
 - **Returns**: Migration files, schema changes, performance reports
 
 ### 7. Ra (INFRA-IMPLEMENTER) - THE INFRASTRUCTURE DEVELOPER
-- **Model**: Claude Sonnet 4.5 (copilot)
+- **Model**: Claude Sonnet 4.6 (copilot)
 - **Role**: Docker, deployment, CI/CD, monitoring
 - **Use for**: Infrastructure changes, deployment strategy, scaling
 - **Returns**: Infrastructure code, deployment procedures
