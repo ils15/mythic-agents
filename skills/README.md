@@ -111,5 +111,5 @@ No manual selection is needed—Copilot intelligently loads skills based on your
 ## References
 
 - **Ofertasdachina Memory Bank**: `/docs/memory-bank/`
-- **Copilot Instructions**: `/home/admin/.github/copilot-instructions.md`
+- **Copilot Instructions**: `$HOME/.github/copilot-instructions.md`
 - **Custom Instructions**: `.github/instructions/`

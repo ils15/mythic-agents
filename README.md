@@ -288,7 +288,7 @@ Each agent gets:
 ## 📁 Repository Structure
 
 ```
-/home/ils15/copilot-agents/
+/path/to/copilot-agents/
 ├── README.md (this file)
 ├── LICENSE (MIT)
 ├── AGENTS.md (agent reference guide)

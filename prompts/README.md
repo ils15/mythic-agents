@@ -342,9 +342,9 @@ Ver: `claude-skills-create.prompt.md`
 ## 📚 Referências
 
 ### Project Context
-- [agents.md](/home/admin/agents.md) - Multi-agent system
-- [project-context.instructions.md](/.github/instructions/project-context.instructions.md)
-- [memory-bank.instructions.md](/.github/instructions/memory-bank.instructions.md)
+- [AGENTS.md](AGENTS.md) - Multi-agent system
+- [project-context.instructions.md](.github/instructions/project-context.instructions.md)
+- [memory-bank.instructions.md](.github/instructions/memory-bank.instructions.md)
 
 ### External Resources
 - OWASP Top 10: https://owasp.org/Top10/

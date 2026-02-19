@@ -3,7 +3,7 @@ name: maat
 description: Database specialist - schema design, migrations, query optimization, SQLAlchemy, Alembic
 argument-hint: "What database task to perform (migrations, schema, optimization, query analysis)"
 model: [Claude Sonnet 4.6 (copilot), GPT-5.3-Codex (copilot)]
-tools: ['search/codebase', 'search/usages', 'edit/editFiles', 'execute/runInTerminal', 'execute/runTask']
+tools: ['search/codebase', 'search/usages', 'edit/editFiles']
 agents: []
 ---
 
@@ -143,7 +143,7 @@ class Example(Base):
 
 1. **Generate Migration**
    ```bash
-   cd /home/admin/website/backend
+    cd /path/to/website/backend
    alembic revision --autogenerate -m "Add example table"
    ```
 
@@ -298,7 +298,7 @@ alembic/versions/0026_add_media_stats.py
 
 - ❌ NO migration docs, schema summaries, analysis files
 - ✅ Handoff to @mnemosyne for ALL documentation
-- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+- ✅ Mnemosyne uses: `instructions/documentation-standards.instructions.md`
 
 **Example**: After creating migration:
 ```

@@ -107,13 +107,13 @@ services/
 ```bash
 # MUST start in this order:
 1. Database Layer (mariadb)
-   cd /home/admin/website/services/database && docker-compose up -d
+  cd /path/to/website/services/database && docker-compose up -d
 
 2. Infra Layer (traefik + redis)
-   cd /home/admin/website/services/infra && docker-compose up -d
+  cd /path/to/website/services/infra && docker-compose up -d
 
 3. Website Layer (frontend + backend)
-   cd /home/admin/website/services/website && docker-compose up -d
+  cd /path/to/website/services/website && docker-compose up -d
 ```
 
 **⚠️ NEVER expose port 80 from frontend - Traefik controls it!**
@@ -246,15 +246,15 @@ http:
 # Start all services in correct order
 
 echo "Starting database layer..."
-cd /home/admin/website/services/database && docker-compose up -d
+cd /path/to/website/services/database && docker-compose up -d
 sleep 10
 
 echo "Starting infra layer..."
-cd /home/admin/website/services/infra && docker-compose up -d
+cd /path/to/website/services/infra && docker-compose up -d
 sleep 5
 
 echo "Starting website layer..."
-cd /home/admin/website/services/website && docker-compose up -d
+cd /path/to/website/services/website && docker-compose up -d
 
 echo "All services started!"
 docker ps
@@ -277,7 +277,7 @@ docker inspect --format='{{.State.Health.Status}}' ofertachina-backend
 
 ```bash
 # Rebuild and restart specific service
-cd /home/admin/website/services/website
+cd /path/to/website/services/website
 docker-compose up -d --build backend
 
 # View logs
@@ -398,7 +398,7 @@ Deployment ready for: Staging environment
 
 - ❌ NO deployment docs, infrastructure summaries, runbooks
 - ✅ Handoff to @mnemosyne for ALL documentation
-- ✅ Mnemosyne uses: `/home/admin/ofertasdachina/.github/instructions/documentation-standards.instructions.md`
+- ✅ Mnemosyne uses: `instructions/documentation-standards.instructions.md`
 
 **Example**: After deployment:
 ```
