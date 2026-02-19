@@ -110,7 +110,7 @@ Full debugging guide with 7-step process in documentation.
 - **Returns**: Comprehensive implementation plans with risk analysis
 
 ### 2. Apollo (EXPLORER) - THE SCOUT
-- **Model**: Gemini 3.1 Flash (copilot)
+- **Model**: Gemini 3.0 Flash (copilot)
 - **Role**: Rapid file discovery plus docs/GitHub evidence gathering
 - **Use for**: Finding related files, understanding dependencies, quick scans
 - **Returns**: File lists, patterns, structured results
