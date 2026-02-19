@@ -567,8 +567,8 @@ model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']
 # Sonnet for production-grade backend code, Codex fallback for heavy refactors and security-sensitive implementation
 
 # Aphrodite (Frontend)
-model: ['Gemini 3 Pro (Preview) (copilot)', 'Claude Sonnet 4.6 (copilot)']
-# Gemini 3 Pro for fast UI iteration and visual/layout-heavy tasks
+model: ['Gemini 3.1 Pro (Preview) (copilot)', 'Claude Sonnet 4.6 (copilot)']
+# Gemini 3.1 Pro for fast UI iteration and visual/layout-heavy tasks
 
 # Maat (Database)
 model: ['Claude Sonnet 4.6 (copilot)', 'GPT-5.3-Codex (copilot)']

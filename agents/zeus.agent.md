@@ -110,7 +110,7 @@ Full debugging guide with 7-step process in documentation.
 - **Returns**: Comprehensive implementation plans with risk analysis
 
 ### 2. Apollo (EXPLORER) - THE SCOUT
-- **Model**: Gemini 3 Flash (copilot)
+- **Model**: Gemini 3.1 Flash (copilot)
 - **Role**: Rapid file discovery plus docs/GitHub evidence gathering
 - **Use for**: Finding related files, understanding dependencies, quick scans
 - **Returns**: File lists, patterns, structured results
@@ -123,7 +123,7 @@ Full debugging guide with 7-step process in documentation.
 - **Returns**: Tested, production-ready code
 
 ### 4. Aphrodite (FRONTEND-IMPLEMENTER) - THE FRONTEND DEVELOPER
-- **Model**: Gemini 3 Pro (copilot)
+- **Model**: Gemini 3.1 Pro (copilot)
 - **Role**: React components, UI implementation, styling
 - **Use for**: Components, pages, responsive layouts
 - **Returns**: Complete React/TypeScript components with tests

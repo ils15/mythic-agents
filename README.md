@@ -356,7 +356,7 @@ Each agent gets:
 System uses role-based model assignment in each `.agent.md` frontmatter:
 - Zeus/Athena: Claude Opus 4.6 (planning/orchestration)
 - Hermes: Claude Sonnet 4.6 with GPT-5.3-Codex fallback (backend implementation)
-- Aphrodite: Gemini 3 Pro (Preview) (frontend/UI speed)
+- Aphrodite: Gemini 3.1 Pro (frontend/UI speed)
 - Maat/Temis: Claude Sonnet 4.6 with GPT-5.3-Codex fallback (DB/review depth)
 
 This follows recent VS Code agent-mode guidance: per-agent model selection, visible subagent progress, prompt queueing, and context compaction for long workflows.
