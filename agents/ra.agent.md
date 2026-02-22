@@ -3,7 +3,12 @@ name: ra
 description: Infrastructure implementation specialist - Docker, deployment, CI/CD, monitoring, scaling
 argument-hint: "What infrastructure task to perform (Docker, deployment, CI/CD, monitoring, scaling)"
 model: Claude Sonnet 4.6 (copilot)
-tools: ['codebase', 'usages', 'editFiles', 'runInTerminal', 'runTask']
+tools: ['codebase', 'usages', 'editFiles', 'runInTerminal', 'runTask', 'readFile']
+handoffs:
+  - label: "➡️ Document Infrastructure"
+    agent: mnemosyne
+    prompt: "Please document the new infrastructure changes and deployment procedures in the Memory Bank."
+    send: false
 ---
 
 # Ra - Infrastructure Implementation Specialist

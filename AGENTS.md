@@ -601,7 +601,7 @@ To create a new specialized agent (example: Database-Expert):
 
 ### Step 1: Create Agent File
 ```bash
-mkdir -p .github/agents
+mkdir -p agents
 cat > agents/database-expert-subagent.agent.md << 'EOF'
 ---
 name: database-expert
@@ -670,9 +670,9 @@ Edit `agents/athena.agent.md` and add:
 
 ## �📚 References
 
-- **Agent Skills:** `.github/skills/*/SKILL.md`
-- **Custom Instructions:** `.github/instructions/*-standards.instructions.md`
-- **Prompt Files:** `.github/prompts/*.prompt.md`
+- **Agent Skills:** `skills/*/SKILL.md`
+- **Custom Instructions:** `instructions/*-standards.instructions.md`
+- **Prompt Files:** `prompts/*.prompt.md`
 - **Agent Definitions:** `agents/*.agent.md`
 - **Memory Bank:** `/docs/memory-bank/`
 - **VSCode Settings:** `.vscode/settings.json`
@@ -681,8 +681,8 @@ Edit `agents/athena.agent.md` and add:
 
 **Last Updated:** February 22, 2026  
 **Total Agents:** 9 (1 orchestrator + 8 specialized)  
-**Total Skills:** 20+  
+**Total Skills:** 17  
 **Total Custom Instructions:** 6  
-**Total Prompt Files:** 7  
+**Total Prompt Files:** 6  
 **Architecture Pattern:** Conductor-Delegate  
 **Mythology Reference:** Greek (Zeus, Athena, Apollo, Hermes, Aphrodite, Temis/Thêmis, Mnemosyne), Egyptian (Ra, Maat)

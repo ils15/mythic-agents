@@ -3,7 +3,7 @@ name: apollo
 description: Investigation scout - rapid codebase discovery plus external docs and GitHub research
 argument-hint: "What files or patterns to search for (e.g. 'all React components in admin/pages')"
 model: [Claude Haiku 4.5 (copilot),Gemini 3 Flash (Preview) (copilot)]
-tools: ['codebase', 'usages', 'fetch']
+tools: ['codebase', 'usages', 'fetch', 'readFile']
 ---
 
 # Apollo - The Scout

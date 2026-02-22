@@ -3,7 +3,12 @@ name: hermes
 description: Backend implementation specialist - FastAPI endpoints, services, routers, test-driven development
 argument-hint: "What backend implementation task to perform (endpoint, service, router, schema)"
 model: [Claude Sonnet 4.6 (copilot), GPT-5.3-Codex (copilot)]
-tools: ['codebase', 'usages', 'editFiles', 'runInTerminal']
+tools: ['codebase', 'usages', 'editFiles', 'runInTerminal', 'readFile']
+handoffs:
+  - label: "➡️ Send to Temis"
+    agent: temis
+    prompt: "Please perform a code review and security audit on these backend changes according to your instructions."
+    send: false
 ---
 
 # Hermes - Backend Executor (FastAPI Specialist)

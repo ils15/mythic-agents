@@ -3,7 +3,12 @@ name: aphrodite
 description: React 19 + TypeScript UI/UX specialist - components, hooks, styling, responsive design
 argument-hint: "What frontend implementation task to perform (component, page, hook, styling)"
 model: [Gemini 3.1 Pro (Preview) (copilot), Claude Sonnet 4.6 (copilot)]
-tools: ['codebase', 'usages', 'editFiles', 'runInTerminal']
+tools: ['codebase', 'usages', 'editFiles', 'runInTerminal', 'readFile']
+handoffs:
+  - label: "➡️ Send to Temis"
+    agent: temis
+    prompt: "Please perform a code review and accessibility audit on these frontend changes according to your instructions."
+    send: false
 ---
 
 # Aphrodite - React Implementation Specialist
