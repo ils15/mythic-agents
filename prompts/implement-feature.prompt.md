@@ -10,7 +10,7 @@ tools: ['search', 'usages', 'edit', 'runCommands', 'runTasks']
 
 ## Complete Workflow (5 Phases)
 
-### Phase 1 - Planning (@Metis)
+### Phase 1 - Planning (@Athena)
 Use @aphrodite-subagent to:
 - Research existing architecture
 - Create detailed TDD plan (3-10 phases)

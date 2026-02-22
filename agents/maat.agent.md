@@ -3,8 +3,7 @@ name: maat
 description: Database specialist - schema design, migrations, query optimization, SQLAlchemy, Alembic
 argument-hint: "What database task to perform (migrations, schema, optimization, query analysis)"
 model: [Claude Sonnet 4.6 (copilot), GPT-5.3-Codex (copilot)]
-tools: ['search/codebase', 'search/usages', 'edit/editFiles']
-agents: []
+tools: ['codebase', 'usages', 'editFiles', 'runInTerminal']
 ---
 
 # Maat - Database Specialist
@@ -308,7 +307,7 @@ alembic/versions/0026_add_media_stats.py
 ## When to Delegate
 
 - **@hermes**: For implementing service logic that uses models
-- **@aphrodite**: For investigating slow queries or deadlocks
+- **@apollo**: For investigating slow queries or deadlocks
 - **@ra**: For database container configuration
 - **@mnemosyne**: For ALL documentation (MANDATORY)
 

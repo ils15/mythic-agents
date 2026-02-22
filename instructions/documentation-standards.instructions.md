@@ -3,7 +3,7 @@ applyTo: '**'
 description: 'Documentation Standards - Where, What, and How to document'
 ---
 
-# Documentation Standards for Ofertasdachina
+# Documentation Standards
 
 ## 🚨 THE GOLDEN RULE
 

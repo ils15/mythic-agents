@@ -6,7 +6,7 @@ agent: metis
 tools: ['search', 'usages']
 ---
 
-# Plan Architecture Strategically (Metis)
+# Plan Architecture Strategically (Athena)
 
 ## Planning Process
 

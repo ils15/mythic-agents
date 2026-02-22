@@ -3,8 +3,17 @@ name: zeus
 description: Main conductor - ONLY orchestrates and delegates, never implements. Coordinates specialized agents through development lifecycle
 argument-hint: "What development phase to orchestrate (planning, implementation, review, deployment)"
 model: ['Claude Opus 4.6 (copilot)', 'Claude Sonnet 4.6 (copilot)']
-tools: ['agent', 'vscode/runCommand', 'execute/runInTerminal', 'read/readFile', 'search/codebase', 'search/usages', 'web/fetch']
-agents: []
+tools: ['agent', 'runVscodeCommand', 'runInTerminal', 'readFile', 'codebase', 'usages', 'fetch']
+agents: ['athena', 'apollo', 'hermes', 'aphrodite', 'maat', 'temis', 'ra', 'mnemosyne']
+handoffs:
+  - label: "📋 Plan Feature"
+    agent: athena
+    prompt: "Create an implementation plan for this feature."
+    send: false
+  - label: "📝 Document Progress"
+    agent: mnemosyne
+    prompt: "Document the completed work and decisions in the Memory Bank."
+    send: false
 ---
 
 # Zeus - Main Conductor
@@ -285,18 +294,9 @@ Phase 1: Planning
 ### Mid-Phase Course Correction
 
 If development needs adjustment:
-
----
-
-## Output Format
-
-Orchestrator provides:
-- ✅ Phase-by-phase progress summary
-- ✅ Agent delegation decisions and rationale
-- ✅ Results from each phase (summarized)
-- ✅ Quality gates and approvals
-- ✅ Ready-to-commit code with test coverage
-- ✅ Risk assessment and mitigation strategies
+- Switch to research mode with @apollo
+- Revise plan with @athena if scope changes
+- Re-delegate to implementers with updated requirements
 
 ### Handoff CTA Examples
 

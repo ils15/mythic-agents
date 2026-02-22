@@ -1,9 +1,8 @@
 ---
 name: mnemosyne
 description: Context management, progress tracking, and retrospectives
-model: Claude Sonnet 4.6 (copilot)
-tools: ['search/codebase', 'search/usages', 'edit/editFiles']
-agents: []
+model: Claude Haiku 4.5 (copilot)
+tools: ['codebase', 'usages', 'editFiles', 'readFile']
 argument-hint: "What project context or decision should be documented (task completion, architecture decision)"
 ---
 
@@ -263,12 +262,12 @@ Memory agent returns:
 
 ## Integration with Other Agents
 
-- **@aphrodite**: Provides new requirements and plans
+- **@athena**: Provides plans and requirements
 - **@hermes**: Implements backend features and updates
 - **@aphrodite**: Implements frontend features and updates
 - **@temis**: Documents test findings and security reviews
 - **@ra**: Documents deployment procedures
-- **@hermes**: Investigates and documents incidents
+- **@apollo**: Investigates and reports findings
 
 ---
 

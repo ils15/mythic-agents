@@ -34,14 +34,14 @@ Requirements:
 Please create a detailed 3-4 phase implementation plan.
 ```
 
-### What Metis Does
+### What Athena Does
 
-Metis researches patterns, calls Apollo for existing auth code, and creates:
+Athena researches patterns, calls Apollo for existing auth code, and creates:
 
 ```
 plans/jwt-authentication/plan.md
 ├─ Overview & objectives
-├─ Phase 1: Database Schema (Tethys)
+├─ Phase 1: Database Schema (Maat)
 │  ├─ Tasks: Create user + token tables
 │  ├─ Test requirements: 5 test cases
 │  └─ Risk: Zero-downtime migration
@@ -66,7 +66,7 @@ plans/jwt-authentication/plan.md
    - Are the files to modify correct?
    - Are test requirements clear?
 3. **Ask questions or approve**
-   - If concerns: `@aphrodite: Please adjust plan because...`
+   - If concerns: `@athena: Please adjust plan because...`
    - If approved: `Plan looks good, let's proceed`
 
 ### ⏸️ PAUSE POINT 1: Plan Approval
@@ -74,7 +74,7 @@ plans/jwt-authentication/plan.md
 ```
 User: "Plan looks good"
 
-Metis: ✅ Plan approved! Ready to orchestrate implementation
+Athena: ✅ Plan approved! Ready to orchestrate implementation
 
 Next: Starting Phase 1 - Database Schema
 ```
@@ -90,9 +90,9 @@ Next: Starting Phase 1 - Database Schema
 @zeus: Orchestrate Phase 1 of JWT plan - Database Schema
 ```
 
-**Zeus delegates to Tethys:**
+**Zeus delegates to Maat:**
 ```
-@tethys: Implement database schema for JWT auth
+@maat: Implement database schema for JWT auth
 
 Phase 1 from: plans/jwt-authentication/plan.md
 
@@ -112,7 +112,7 @@ Red → Green → Refactor TDD cycle required.
 Coverage target: >80%
 ```
 
-**Tethys does:**
+**Maat does:**
 1. Write FAILING migration test (RED)
    ```python
    def test_jwt_token_table_exists():
@@ -134,9 +134,9 @@ Coverage target: >80%
    - Add constraints
    - Add timestamps
 
-**Tethys delivers:** Schema files + 4 test cases, 100% coverage
+**Maat delivers:** Schema files + 4 test cases, 100% coverage
 
-**Tyr reviews:**
+**Temis reviews:**
 ```
 ✅ Coverage: 100% 
 ✅ Security: No SQL injection
@@ -243,7 +243,7 @@ class JWTService:
 
 **Hermes delivers:** Services + 24 unit tests, 96% coverage
 
-**Tyr reviews:**
+**Temis reviews:**
 ```
 ✅ Coverage: 96%
 ✅ Security: Proper hashing, no secrets in logs
@@ -397,7 +397,7 @@ export function LoginForm({onSubmitSuccess}) {
 
 **Athena delivers:** Components + 13 component tests, 94% coverage
 
-**Tyr reviews:**
+**Temis reviews:**
 ```
 ✅ Coverage: 94%
 ✅ Security: Tokens in httpOnly cookies
@@ -592,7 +592,7 @@ Action:
 1. Hermes adds missing test cases
 2. Re-runs coverage: pytest --cov
 3. Verify 80%+ coverage
-4. Tyr reviews again
+4. Temis reviews again
 5. Mnemosyne updates phase-N-complete.md
 ```
 
@@ -600,13 +600,13 @@ Action:
 
 **Solution:**
 ```
-Tyr: "SQL injection in query (BLOCKED)"
+Temis: "SQL injection in query (BLOCKED)"
 
 Action:
-1. Tethys fixes query (parameterized)
+1. Maat fixes query (parameterized)
 2. Re-runs security audit
 3. Verify fix
-4. Tyr reviews again
+4. Temis reviews again
 5. Phase proceeds
 ```
 
@@ -614,7 +614,7 @@ Action:
 
 **Solution:**
 ```
-Tyr: "Accessibility 82/100, need 95+ (BLOCKED)"
+Temis: "Accessibility 82/100, need 95+ (BLOCKED)"
 
 Action:
 1. Athena improves accessibility
@@ -622,14 +622,14 @@ Action:
 3. Adds missing ARIA labels
 4. Improves keyboard navigation
 5. Re-checks: 97/100 ✅
-6. Tyr approves
+6. Temis approves
 ```
 
 ---
 
 ## Common Patterns
 
-### Pattern 1: Simple Bug Fix (Skip Metis, Use Apollo + Hermes)
+### Pattern 1: Simple Bug Fix (Skip Athena, Use Apollo + Hermes)
 ```
 Discovery:   @apollo: Find bug in authentication
 Fix:         @hermes: Fix the validation error  
@@ -647,11 +647,11 @@ Result:      Complete 5-phase feature, 95% coverage
 Timeline:    1-2 days
 ```
 
-### Pattern 3: Database Optimization (Skip Metis, Use Apollo + Tethys)
+### Pattern 3: Database Optimization (Skip Athena, Use Apollo + Maat)
 ```
 Discovery:   @apollo: Find N+1 queries
-Optimize:    @tethys: Add indexes + optimize queries
-Review:      Auto-invoked by Tethys
+Optimize:    @maat: Add indexes + optimize queries
+Review:      Auto-invoked by Maat
 Result:      10x faster queries, <80 lines changed
 Timeline:    2 hours
 ```
@@ -680,12 +680,12 @@ Artifacts:       4 documents (plan + 3 phases + complete)
 
 🎯 **Plan First** - Saves 2-3x rework time  
 🎯 **Use Pause Points** - You control when to proceed  
-🎯 **Trust Tyr** - Code review catches issues early  
+🎯 **Trust Temis** - Code review catches issues early  
 🎯 **Read Artifacts** - Plans contain everything you need  
 🎯 **Commit Atomically** - One phase = one commit  
 🎯 **Test First** - RED tests before code  
 🎯 **Coverage Matters** - <80% = blocked, no exceptions  
-🎯 **Security First** - Tyr enforces OWASP compliance  
+🎯 **Security First** - Temis enforces OWASP compliance  
 
 ---
 

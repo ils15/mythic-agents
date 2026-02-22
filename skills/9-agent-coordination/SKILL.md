@@ -11,14 +11,14 @@ Master guide to orchestrating the complete agent system for rapid, TDD-driven fe
                            |
      ┌─────────────────────┼─────────────────────┐
      |                     |                     |
-🧠 METIS            🔍 APOLLO          Stage 1: Planning
+🧠 ATHENA            🔍 APOLLO          Stage 1: Planning
 (Plans)          (Discovers)
      |                     |
      └─────────────────────┼─────────────────────┘
                            |
   ┌────────────┬───────────┼───────────┬────────────┐
   |            |           |           |            |
-🔥 HERMES   💎 ATHENA  🌊 TETHYS   ⚖️ TYR    ⚙️ HEPHAESTUS
+🔥 HERMES   💎 APHRODITE 🌊 MAAT   ⚖️ TEMIS    ⚙️ RA
 Backend     Frontend   Database   Review   Infrastructure
   |            |           |           |            |
   └────────────┴───────────┼───────────┴────────────┘
@@ -35,29 +35,29 @@ Backend     Frontend   Database   Review   Infrastructure
 **When:** Complex features spanning backend + frontend + database  
 **Invocation:** `@zeus: Implement [feature description]`  
 **Output:** Full feature with all phases, TDD + artifacts  
-**Delegates to:** Metis → Apollo → {Hermes, Athena, Tethys} → Tyr → Hephaestus → Mnemosyne
+**Delegates to:** Athena → Apollo → {Hermes, Aphrodite, Maat} → Temis → Ra → Mnemosyne
 
 **Example:**
 ```
 @zeus: Implement email verification flow with JWT expiry
 
-- Metis plans 3 phases
+- Athena plans 3 phases
 - Apollo finds related code
 - Hermes: backend endpoints (TDD)
-- Athena: verification form (TDD)
-- Tethys: migration schema (TDD)
-- Tyr: reviews each phase (coverage >80%)
-- Hephaestus: Docker updates
+- Aphrodite: verification form (TDD)
+- Maat: migration schema (TDD)
+- Temis: reviews each phase (coverage >80%)
+- Ra: Docker updates
 - Mnemosyne: artifacts + docs
 ```
 
 ---
 
-### 🧠 Metis (Strategic Planner)
+### 🧠 Athena (Strategic Planner)
 **Role:** Design architecture & create TDD roadmaps  
 **When:** Complex features, significant design decisions  
-**Invocation:** `@aphrodite: Plan [architecture] for [feature]`  
-**Output:** `plans/[feature]/plan.md` with 3-10 phases  
+**Invocation:** `@athena: Plan [architecture] for [feature]`  
+**Output:** Concise plan presented in chat with 3-5 phases  
 **Depends on:** Apollo (for discovery of existing patterns)
 
 **Plan Structure:**
@@ -152,7 +152,7 @@ Coverage requirement: >80%
 
 ---
 
-### 💎 Athena (Frontend Implementation)
+### 💎 Aphrodite (Frontend Implementation)
 **Role:** React components, responsive design, accessibility  
 **When:** Creating/modifying UI, components, user flows  
 **Invocation:** `@aphrodite: Build [component/page]`  
@@ -164,7 +164,7 @@ Coverage requirement: >80%
 - State management (hooks)
 - Testing (vitest)
 
-**TDD Workflow (Athena):**
+**TDD Workflow (Aphrodite):**
 ```
 Step 1: RED - Component test fails
   test("LoginForm submits with email and password", () => {
@@ -212,10 +212,10 @@ Coverage requirement: >80%
 
 ---
 
-### 🌊 Tethys (Database)
+### 🌊 Maat (Database)
 **Role:** Schema design, query optimization, migrations  
 **When:** Creating/modifying database structure, fixing N+1 queries  
-**Invocation:** `@tethys: [Design/Optimize] [table/query]`  
+**Invocation:** `@maat: [Design/Optimize] [table/query]`  
 **Specialization:**
 - SQLAlchemy ORM + query patterns
 - Alembic migrations (zero-downtime strategy)
@@ -242,10 +242,10 @@ Coverage requirement: >80%
 
 ---
 
-### ⚖️ Tyr (Code Reviewer)
+### ⚖️ Temis (Code Reviewer)
 **Role:** Code review, security audit, coverage enforcement  
 **When:** Auto-invoked after each phase by Zeus  
-**Manual Invocation:** `@tyr: Review [PR/code] for security`  
+**Manual Invocation:** `@temis: Review [PR/code] for security`  
 **Authority:** Can block phase if:
 - Coverage <80% (minimum)
 - OWASP Top 10 violations
@@ -269,10 +269,10 @@ Coverage requirement: >80%
 
 ---
 
-### ⚙️ Hephaestus (Infrastructure)
+### ⚙️ Ra (Infrastructure)
 **Role:** Docker, deployment, CI/CD  
 **When:** Containerizing services, deployment strategy, env config  
-**Invocation:** `@hephaestus: Create/Update [dockerfile/compose]`  
+**Invocation:** `@ra: Create/Update [dockerfile/compose]`  
 **Specialization:**
 - Multi-stage Docker builds
 - Non-root user execution
@@ -310,17 +310,17 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
 **Artifacts Generated:**
 ```
 plans/jwt-auth/
-├── plan.md                 # Initial plan (Metis)
-├── phase-1-complete.md     # Schema done (Tyr approved)
-├── phase-2-complete.md     # Backend done (Tyr approved)
-├── phase-3-complete.md     # Frontend done (Tyr approved)
+├── plan.md                 # Initial plan (Athena)
+├── phase-1-complete.md     # Schema done (Temis approved)
+├── phase-2-complete.md     # Backend done (Temis approved)
+├── phase-3-complete.md     # Frontend done (Temis approved)
 └── complete.md             # Final summary (all phases)
 
 Each file contains:
 - Phase objective
 - Files modified/created
 - Tests added + coverage %
-- Tyr approval status
+- Temis approval status
 - Git commit message
 - Decisions + rationale
 ```
@@ -333,7 +333,7 @@ Control stays with YOU through mandatory pauses:
 
 ### ⏸️ Pause Point 1: Plan Approval
 ```
-Metis creates: plans/[feature]/plan.md
+Athena creates: plans/[feature]/plan.md
                       ↓
             YOU REVIEW the plan
                       ↓
@@ -354,7 +354,7 @@ Metis creates: plans/[feature]/plan.md
 ```
 Phase 1-X implementation complete
                       ↓
-    Tyr reviews + runs coverage check
+    Temis reviews + runs coverage check
                       ↓
  Mnemosyne creates: phase-N-complete.md
                       ↓
@@ -374,7 +374,7 @@ Phase 1-X implementation complete
 
 ### ⏸️ Pause Point 3: Git Commit
 ```
-Phase approved by Tyr
+Phase approved by Temis
                       ↓
           YOU RUN: git commit
                       ↓
@@ -389,7 +389,7 @@ Phase approved by Tyr
 
 ### 1. Plan (5 min)
 ```bash
-@aphrodite: Plan adding JWT auth with refresh tokens
+@athena: Plan adding JWT auth with refresh tokens
 ```
 
 ### 2. Review Plan (10 min)
@@ -403,9 +403,9 @@ Phase approved by Tyr
 @zeus: Implement JWT auth using the plan I approved
 ```
 
-Zeus orchestrates Hermes + Athena + Tethys (in parallel when possible)
+Zeus orchestrates Hermes + Aphrodite + Maat (in parallel when possible)
 
-Each phase: Zeus → implementation → Tyr review → ⏸️ PAUSE POINT 2 → you see results
+Each phase: Zeus → implementation → Temis review → ⏸️ PAUSE POINT 2 → you see results
 
 ### 4. Commit Each Phase (3 min each)
 ```bash
@@ -432,7 +432,7 @@ START: What do you need?
 │  └─ USE: @zeus (orchestrates all)
 │
 ├─ "Just planning, no implementation"
-│  └─ USE: @aphrodite (create plan.md)
+│  └─ USE: @athena (create plan)
 │
 ├─ "Find where something is used"
 │  └─ USE: @apollo (parallel searches)
@@ -444,13 +444,13 @@ START: What do you need?
 │  └─ USE: @aphrodite (frontend + TDD)
 │
 ├─ "Database schema / query optimization"
-│  └─ USE: @tethys (schema + TDD)
+│  └─ USE: @maat (schema + TDD)
 │
 ├─ "Code review / security check"
-│  └─ USE: @tyr (audit + coverage check)
+│  └─ USE: @temis (audit + coverage check)
 │
 ├─ "Docker / deployment"
-│  └─ USE: @hephaestus (infrastructure)
+│  └─ USE: @ra (infrastructure)
 │
 └─ "Document decision / update artifact"
    └─ USE: @mnemosyne (memory bank)
@@ -477,11 +477,11 @@ START: What do you need?
 
 ## Tips & Tricks
 
-🎯 **Always plan first** - `@aphrodite` before `@zeus`  
+🎯 **Always plan first** - `@athena` before `@zeus`  
 🎯 **Use pause points** - Review at critical junctures  
 🎯 **Check artifacts** - `plans/[feature]/` is your audit trail  
 🎯 **Direct agents for quick tasks** - Don't always orchestrate  
-🎯 **Coverage matters** - Tyr enforces >80%, you get confidence  
+🎯 **Coverage matters** - Temis enforces >80%, you get confidence  
 🎯 **Git is yours** - You decide commits, no auto-commits  
 🎯 **Errors caught early** - RED tests first, not at merge  
 
@@ -489,7 +489,7 @@ START: What do you need?
 
 ## Examples
 
-### Example 1: Simple Bug Fix (Apollo → Hermes → Tyr)
+### Example 1: Simple Bug Fix (Apollo → Hermes → Temis)
 ```
 Discovery: @apollo: Find all 500 errors in auth service
 Fix: @hermes: Fix the validation error in POST /auth
@@ -497,19 +497,19 @@ Review: Auto-invoked by Hermes
 Result: Minimal code change, >80% coverage
 ```
 
-### Example 2: Feature (Metis → Zeus → Artifacts)
+### Example 2: Feature (Athena → Zeus → Artifacts)
 ```
-Plan: @aphrodite: Plan adding 2FA to login flow
+Plan: @athena: Plan adding 2FA to login flow
 Review: You approve 3-phase plan
 Implement: @zeus: Implement 2FA using approved plan
 Result: 3 phases, each reviewed, all TDD, all documented
 ```
 
-### Example 3: Optimization (Apollo → Tethys → Tyr)
+### Example 3: Optimization (Apollo → Maat → Temis)
 ```
 Discovery: @apollo: Find N+1 queries in user list
-Optimize: @tethys: Optimize users table queries
-Review: Auto-invoked by Tethys
+Optimize: @maat: Optimize users table queries
+Review: Auto-invoked by Maat
 Result: EXPLAIN ANALYZE before/after, better performance
 ```
 

@@ -679,10 +679,10 @@ Edit `agents/athena.agent.md` and add:
 
 ---
 
-**Last Updated:** February 5, 2026  
+**Last Updated:** February 22, 2026  
 **Total Agents:** 9 (1 orchestrator + 8 specialized)  
-**Total Skills:** 6  
-**Total Custom Instructions:** 5  
-**Total Prompt Files:** 6  
+**Total Skills:** 20+  
+**Total Custom Instructions:** 6  
+**Total Prompt Files:** 7  
 **Architecture Pattern:** Conductor-Delegate  
-**Mythology Reference:** Greek (Zeus, Athena, Apollo, Hermes, Aphrodite), Egyptian (Ra, Maat, Temis), Greek memory (Mnemosyne)
+**Mythology Reference:** Greek (Zeus, Athena, Apollo, Hermes, Aphrodite, Temis/Thêmis, Mnemosyne), Egyptian (Ra, Maat)

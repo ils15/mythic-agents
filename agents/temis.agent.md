@@ -3,8 +3,16 @@ name: temis
 description: Code review specialist - quality validation, correctness, test coverage analysis, security audits (consolidated from code-reviewer + security-specialist)
 argument-hint: "What code should be reviewed and validated (changed files, test coverage, security)"
 model: [Claude Sonnet 4.6 (copilot), GPT-5.3-Codex (copilot)]
-tools: ['search/codebase', 'search/usages', 'edit/editFiles']
-agents: []
+tools: ['codebase', 'usages', 'editFiles', 'runInTerminal']
+handoffs:
+  - label: "🔧 Fix Review Issues"
+    agent: zeus
+    prompt: "Fix the issues identified in the code review above."
+    send: false
+  - label: "📝 Document Findings"
+    agent: mnemosyne
+    prompt: "Document the review findings and decisions above in the Memory Bank."
+    send: false
 ---
 
 # Temis - Quality & Security Gate Specialist
@@ -268,10 +276,10 @@ Code-Reviewer agent returns:
 
 - **@hermes**: Implements backend code
 - **@aphrodite**: Implements frontend code
-- **@aphrodite**: Provides specifications and requirements
+- **@athena**: Provides specifications and requirements
 - **@ra**: Tests deployment and infrastructure code
 - **@temis**: Provides security-specific findings (self)
-- **@hermes**: Investigates performance issues
+- **@apollo**: Investigates performance issues
 - **@mnemosyne**: Documents ALL review findings (MANDATORY)
 - **@temis** must follow: `instructions/code-review-standards.instructions.md`
 - **@temis** should consult: `instructions/security-audit.instructions.md` when relevant
