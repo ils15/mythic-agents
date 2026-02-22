@@ -309,7 +309,7 @@ Each agent gets:
 │   ├── frontend-standards.instructions.md
 │   ├── database-standards.instructions.md
 │   ├── code-review-standards.instructions.md
-│   ├── documentation-standards.md
+│   ├── documentation-standards.instructions.md
 │   └── infra-standards.instructions.md
 │
 ├── prompts/ (agent invocation guides)
@@ -320,12 +320,12 @@ Each agent gets:
 │   ├── optimize-database.prompt.md
 │   └── orchestrate-with-zeus.prompt.md (master prompt)
 │
-└── skills/ (reference documentation - 20 directories)
+└── skills/ (reference documentation - 17 directories)
     ├── 9-agent-coordination/ ← Start here to understand agents
     ├── orchestration-workflow/ ← Step-by-step practical guide
     ├── tdd-with-agents/ ← Testing standards and examples
     ├── artifact-management/ ← Plan directory structure
-    └── ... (16 more specialized skills)
+    └── ... (13 more specialized skills)
 ```
 
 ---
@@ -393,7 +393,7 @@ You don't need to do anything—it's automatic.
 1. Read: **This README** (30 min)
 2. Read: `skills/9-agent-coordination/SKILL.md` (agent reference)
 3. Try: Your first feature following Quick Start above (2 hours)
-4. Review: Auto-generated `plans/[feature]/complete.md` (understand artifacts)
+4. Review: Auto-generated Memory Bank in `/docs/memory-bank/` (understand artifacts)
 
 ### For Advanced Users  
 1. Read: `skills/orchestration-workflow/SKILL.md` (real-world example)
@@ -475,7 +475,7 @@ Not directly. The system is built for VSCode Copilot Chat. Other editors don't h
 
 ### "What happens if Copilot connectivity drops?"
 
-All open phases pause. You can retry or save progress manually. The `plans/` directory saves everything so far.
+All open phases pause. You can retry or save progress manually. The `/docs/memory-bank/` directory saves everything so far.
 
 ### "Can I customize the agents?"
 
@@ -487,7 +487,7 @@ Yes. Read `AGENTS.md` for architecture, then modify individual `.agent.md` files
 - Complex features: 6-8 hours  
 - Large systems: 20-30 hours spread across multiple days
 
-All documented with `plans/[feature]/` artifacts.
+All documented with `/docs/memory-bank/` artifacts.
 
 ### "What if I disagree with Temis's code review?"
 
