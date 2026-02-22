@@ -1,3 +1,8 @@
+---
+name: artifact-management
+description: "Complete guide to the artifact trail system - plans directory structure, templates, and best practices for documenting feature implementations"
+---
+
 # Artifact Management & Plans Directory Structure
 
 Complete guide to the artifact trail system that documents every feature implementation. This skill covers the plans/ directory structure, artifact templates, and best practices for maintaining institutional memory.

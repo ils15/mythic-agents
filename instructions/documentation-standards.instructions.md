@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+name: "Documentation Standards"
 description: 'Documentation Standards - Where, What, and How to document'
 ---
 

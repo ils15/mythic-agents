@@ -1,13 +1,13 @@
-# Prompt Improver - Exemplos Práticos
+# Prompt Improver - Practical Examples
 
-## Exemplo 1: Prompt de Bot de Produtos
+## Example 1: Prompt de Bot de Produtos
 
-### ❌ Prompt Original (Ruim)
+### ❌ Original Prompt (Bad)
 ```
 Você é um bot de produtos chineses. Responda perguntas sobre produtos.
 ```
 
-### ✅ Prompt Melhorado
+### ✅ Improved Prompt
 ```
 Você é um Assistente de Produtos OfertaChina especializado em encontrar deals chineses.
 
@@ -37,7 +37,7 @@ Para cada produto, inclua:
 
 ---
 
-## Exemplo 2: Fluxo Conversacional para Busca de Produtos
+## Example 2: Fluxo Conversacional para Busca de Produtos
 
 ### 📱 Conversa Melhorada para Telegram
 
@@ -108,7 +108,7 @@ Bot: "📱 **Fone Bluetooth X200**
 
 ---
 
-## Exemplo 3: Prompt para API Gemini
+## Example 3: Prompt para API Gemini
 
 ### ❌ Ruim
 ```
@@ -147,7 +147,7 @@ Analise o produto fornecido e gere um resumo em Portuguese Brasileiro.
 
 ---
 
-## Exemplo 4: Melhorias Específicas por Domínio
+## Example 4: Melhorias Específicas por Domínio
 
 ### Bot de Cupons
 ```

@@ -1,3 +1,8 @@
+---
+name: orchestration-workflow
+description: "Practical step-by-step walkthrough for orchestrating features end-to-end using the 9-agent system, from planning through deployment"
+---
+
 # Orchestration Workflow: Step-by-Step Guide
 
 Practical walkthrough for using the 9-agent system end-to-end. This is your "how-to" guide for orchestrating features from planning through production deployment.

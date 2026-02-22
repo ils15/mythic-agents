@@ -1,3 +1,8 @@
+---
+name: 9-agent-coordination
+description: "Master guide to orchestrating the 9-agent system for rapid, TDD-driven feature development with guaranteed code quality and audit trails"
+---
+
 # 9-Agent Coordination System
 
 Master guide to orchestrating the complete agent system for rapid, TDD-driven feature development with guaranteed code quality and audit trails.

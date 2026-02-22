@@ -2,7 +2,7 @@
 name: debug-issue
 description: "Rapidly debug issues with parallel file discovery and analysis"
 argument-hint: "[Error message or bug description]"
-agent: apollo-subagent
+agent: apollo
 tools: ['search', 'usages']
 ---
 
