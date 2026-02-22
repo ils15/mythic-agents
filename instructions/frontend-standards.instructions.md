@@ -1,10 +1,10 @@
 ---
 description: "Frontend development standards for React/TypeScript"
 name: "Frontend Development Standards"
-applyTo: "**/*.{tsx,jsx}"
+applyTo: "**/*.{ts,tsx,js,jsx}"
 ---
 
-# Frontend Development Standards (Afrodite)
+# Frontend Development Standards (Aphrodite)
 
 ## TypeScript
 - Strict mode always (no `any` types)

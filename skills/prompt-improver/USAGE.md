@@ -1,313 +1,313 @@
-# Prompt Improver - Guia de Uso
+# Prompt Improver - Usage Guide
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### Uso 1: Melhorar Prompt Simples
+### Use Case 1: Improve a Simple Prompt
 
-**Você pede:**
+**You ask:**
 ```
-@prompt-improver Analise e melhore este prompt para meu bot de cupons:
+@prompt-improver Analyze and improve this prompt for my coupon bot:
 
-"Você é um bot que mostra cupons e códigos desconto. 
-Se o usuário pedir cupom, mostre cupons válidos.
-Se não tiver cupom, diga que não tem."
+"You are a bot that shows coupons and discount codes. 
+If the user asks for a coupon, show valid coupons.
+If there are no coupons, say you don't have any."
 ```
 
-**Skill Responde:**
+**Skill Responds:**
 
 ```markdown
-## 📊 ANÁLISE DO PROMPT ORIGINAL
-- Clareza: 4/10 ❌ Muito vaga
-- Especificidade: 2/10 ❌ Falta estrutura
-- Bot Compatibility: ⚠️ Sem formatação
-- Principais Issues:
-  - Sem estrutura de resposta
-  - Sem tratamento de erros
-  - Sem limites de caracteres
-  - Sem emojis/formatação
+## 📊 ORIGINAL PROMPT ANALYSIS
+- Clarity: 4/10 ❌ Too vague
+- Specificity: 2/10 ❌ Lacks structure
+- Bot Compatibility: ⚠️ No formatting
+- Key Issues:
+  - No response structure
+  - No error handling
+  - No character limits
+  - No emojis/formatting
 
-## 🎯 RECOMENDAÇÕES
+## 🎯 RECOMMENDATIONS
 
-1. **Adicionar Persona Clara**
-   "Seu Objetivo: Ajudar usuários a encontrar cupons válidos"
+1. **Add Clear Persona**
+   "Your Goal: Help users find valid coupons"
 
-2. **Estruturar Regras**
-   Use listas numeradas com ✅/❌
+2. **Structure Rules**
+   Use numbered lists with ✅/❌
 
-3. **Definir Formato**
-   JSON ou markdown estruturado
+3. **Define Format**
+   JSON or structured markdown
 
-4. **Adicionar Constraints**
-   Telegram: max 4096 caracteres
+4. **Add Constraints**
+   Telegram: max 4096 characters
 
-## ✨ PROMPT MELHORADO
+## ✨ IMPROVED PROMPT
 
-Você é um **Bot de Cupons OfertaChina** especializado em encontrar códigos de desconto.
+You are an **E-Commerce Coupon Bot** specialized in finding discount codes.
 
-### Seu Objetivo:
-- Buscar cupons válidos e ativos
-- Mostrar desconto exato (% ou valor)
-- Indicar validade e requisitos
-- Ajudar usuários a economizar
+### Your Goal:
+- Find valid and active coupons
+- Show exact discount (% or value)
+- Indicate expiration and requirements
+- Help users save money
 
-### Regras Rigorosas:
-✅ Apenas cupons verificados
-✅ Mostrar data de expiração
-✅ Indicar compra mínima
-✅ Diferenciar novo/refill
-❌ Nunca compartilhe cupons expirados
-❌ Nunca prometa descontos falsos
+### Strict Rules:
+✅ Only verified coupons
+✅ Show expiration date
+✅ Indicate minimum spend
+✅ Differentiate new/returning customers
+❌ NEVER share expired coupons
+❌ NEVER promise fake discounts
 
-### Formato de Resposta:
+### Response Format:
 \`\`\`
-🎟️ [CÓDIGO_CUPOM]
-Desconto: [VALOR] (% ou R$)
-Validade: [DATA_EXPIRAÇÃO]
-Compra Mín: [R$]
-Tipo: [Novo/Refill/Ambos]
-Categoria: [Categoria]
+🎟️ [COUPON_CODE]
+Discount: [VALUE] (% or $)
+Valid until: [EXPIRATION_DATE]
+Min Spend: [$]
+Type: [New/Returning/Both]
+Category: [Category]
 
-[📋 Copiar Código] [🔗 Link Direto] [📱 Compartilhar]
+[📋 Copy Code] [🔗 Direct Link] [📱 Share]
 \`\`\`
 
-### Tratamento de Erros:
-- "Cupom não encontrado. Tente: [sugestões]"
-- "Cupom expirou em [data]. Tente outros: [lista]"
-- "Sem cupons no momento. Volte amanhã!"
+### Error Handling:
+- "Coupon not found. Try: [suggestions]"
+- "Coupon expired on [date]. Try these: [list]"
+- "No coupons at the moment. Check back tomorrow!"
 
 ---
 
-**Melhoria Esperada:** +6 pontos de clareza, estrutura profissional, melhor UX
+**Expected Improvement:** +6 clarity points, professional structure, better UX
 ```
 
 ---
 
-### Uso 2: Otimizar para Plataforma
+### Use Case 2: Platform Optimization
 
 ```
-@prompt-improver Otimize este prompt para WhatsApp Bot (WAHA):
+@prompt-improver Optimize this prompt for WhatsApp Bot (WAHA):
 
-"Bot que faz busca de produtos e mostra resultados."
+"Bot that searches for products and shows results."
 ```
 
-**Skill Responde:**
+**Skill Responds:**
 
 ```markdown
-## 🔄 OTIMIZAÇÃO PARA WHATSAPP (WAHA)
+## 🔄 WHATSAPP (WAHA) OPTIMIZATION
 
-### Considerações WAHA vs Telegram:
-❌ Sem inline keyboards (Telegram)
-✅ Usa template messages
-✅ Buttons (máx 3 por mensagem)
-⚠️ Markdown limitado
+### WAHA vs Telegram Considerations:
+❌ No inline keyboards (Telegram feature)
+✅ Uses template messages
+✅ Buttons (max 3 per message)
+⚠️ Limited Markdown
 
-### Prompt Otimizado:
+### Optimized Prompt:
 
-Você é um Bot de Produtos para WhatsApp (WAHA).
+You are a Product Search Bot for WhatsApp (WAHA).
 
-**Restrições WhatsApp:**
-- Max 4096 caracteres (igual Telegram, mas raramente atingido)
-- Sem markdown complexo (apenas *negrito* e _itálico_)
-- Máximo 3 botões por mensagem
-- Templates para notificações em massa
-- Sem inline keyboards (use buttons em lista)
+**WhatsApp Constraints:**
+- Max 4096 characters (rarely reached but keep it concise)
+- No complex markdown (only *bold* and _italic_)
+- Maximum 3 buttons per message
+- Templates for bulk notifications
+- No inline keyboards (use list buttons instead)
 
-**Formato de Resposta:**
-Mensagem principal (até 1000 caracteres)
-[Botão 1] [Botão 2] [Botão 3]
+**Response Format:**
+Main message (up to 1000 characters)
+[Button 1] [Button 2] [Button 3]
 
-**Exemplo:**
-*Produto encontrado!*
+**Example:**
+*Product found!*
 _iPhone 14_ 
-Preço: ¥3.999 → R$1.999
+Price: $899 → $799
 
-[👁️ Ver Detalhes]
-[💚 Favoritar]
-[👥 Compartilhar]
+[👁️ View Details]
+[💚 Favorite]
+[👥 Share]
 ```
 
 ---
 
-## 📋 Tipos de Melhorias Disponíveis
+## 📋 Available Improvement Types
 
-| Tipo | Comando | Output |
+| Type | Command | Output |
 |------|---------|--------|
-| **Geral** | `@prompt-improver Melhore...` | Análise completa + versão melhorada |
-| **Platform** | `@prompt-improver Otimize para [Telegram/WhatsApp]` | Adaptado para plataforma |
-| **Flow Design** | `@prompt-improver Desenhe fluxo conversacional` | Estrutura multi-turno |
-| **API Prep** | `@prompt-improver Prepare para API [Gemini/GPT]` | JSON schema + exemplos |
-| **Audit** | `@prompt-improver Audite este prompt` | Checklist de qualidade |
+| **General** | `@prompt-improver Improve...` | Full analysis + improved version |
+| **Platform** | `@prompt-improver Optimize for [Telegram/WhatsApp]` | Platform-adapted version |
+| **Flow Design** | `@prompt-improver Design conversation flow` | Multi-turn structure |
+| **API Prep** | `@prompt-improver Prepare for [Gemini/GPT] API` | JSON schema + examples |
+| **Audit** | `@prompt-improver Audit this prompt` | Quality checklist |
 
 ---
 
-## 🎯 Casos de Uso Comuns
+## 🎯 Common Scenarios
 
-### 1. Bot de Produtos
+### 1. Product Bot
 ```
-@prompt-improver Melhore este prompt para bot de produtos:
-[seu prompt aqui]
+@prompt-improver Improve this prompt for a product bot:
+[your prompt here]
 
-Contexto adicional:
-- Plataforma: Telegram
-- Usuários: 50k/mês
-- Resposta: Max 300 palavras
-```
-
-### 2. Bot de Suporte
-```
-@prompt-improver Desenhe fluxo conversacional para bot de suporte
-
-Requisitos:
-- Categorizar problema
-- Esclarecer tipo de pedido
-- Fornecer solução ou escalar
+Additional Context:
+- Platform: Telegram
+- Users: 50k/month
+- Response: Max 300 words
 ```
 
-### 3. Prompt para API
+### 2. Support Bot
 ```
-@prompt-improver Prepare prompt para integração com Gemini
+@prompt-improver Design conversational flow for support bot
 
-Tarefa: Análise de produtos chineses
-Entrada: JSON com dados do produto
-Saída: Recomendação + análise detalhada
-```
-
-### 4. Validação de Qualidade
-```
-@prompt-improver Audite qualidade deste prompt:
-[prompt atual]
-
-Critérios:
-- Clareza
-- Compatibilidade Telegram
-- Tratamento de erros
+Requirements:
+- Categorize issue
+- Clarify request type
+- Provide solution or escalate
 ```
 
----
-
-## ⚡ Dicas Rapidas
-
-### ✅ BOM
+### 3. API Prompt
 ```
-"Máximo 300 palavras, sempre use markdown, formato JSON"
+@prompt-improver Prepare prompt for Gemini integration
+
+Task: E-commerce product analysis
+Input: JSON with product data
+Output: Recommendation + detailed analysis
 ```
 
-### ❌ RUIM
+### 4. Quality Validation
 ```
-"Responda bem, use formatação, seja profissional"
+@prompt-improver Audit the quality of this prompt:
+[current prompt]
+
+Criteria:
+- Clarity
+- Telegram compatibility
+- Error handling
 ```
 
 ---
 
-### ✅ BOM (Exemplo)
+## ⚡ Quick Tips
+
+### ✅ GOOD
 ```
-Para cada produto, responda:
+"Maximum 300 words, always use markdown, JSON format"
+```
+
+### ❌ BAD
+```
+"Answer nicely, use formatting, be professional"
+```
+
+---
+
+### ✅ GOOD (Example)
+```
+For each product, respond:
 {
-  "nome": "string",
-  "preco": "number",
+  "name": "string",
+  "price": "number",
   "link": "url"
 }
 ```
 
-### ❌ RUIM
+### ❌ BAD
 ```
-"Mostre produto e preço e link"
-```
-
----
-
-## 🔗 Integração com outras Skills
-
-### Com Frontend Analyzer
-```
-1. Frontend Analyzer extrai cores/fontes
-2. Prompt Improver otimiza instruções de UI
-3. Resultado: Bot responde com UI tokens corretos
-```
-
-### Com Telegram UI Design
-```
-1. Telegram UI desenha keyboard
-2. Prompt Improver escreve instruções
-3. Resultado: Bot implementa UI corretamente
+"Show product and price and link"
 ```
 
 ---
 
-## 📊 Métricas de Melhoria
+## 🔗 Integration with Other Skills
+
+### With Frontend Analyzer
+```
+1. Frontend Analyzer extracts colors/fonts
+2. Prompt Improver optimizes UI instructions
+3. Result: Bot replies with correct UI tokens
+```
+
+### With Telegram UI Design
+```
+1. Telegram UI designs keyboard layout
+2. Prompt Improver writes instructions for the layout
+3. Result: Bot implements UI correctly
+```
+
+---
+
+## 📊 Improvement Metrics
 
 ```markdown
-## Antes vs Depois
+## Before vs After
 
-### Prompt Original: "Bot de produtos"
-- Clareza: 2/10
+### Original Prompt: "Product bot"
+- Clarity: 2/10
 - Tokens (est.): 450
-- Taxa erro: ~40%
+- Error rate: ~40%
 
-### Prompt Melhorado
-- Clareza: 9/10 (+350%)
+### Improved Prompt
+- Clarity: 9/10 (+350%)
 - Tokens (est.): 600 (+33%)
-- Taxa erro: ~5% (-87.5%)
+- Error rate: ~5% (-87.5%)
 
-**Benefício:** Mais clareza com custo aceitável de tokens
+**Benefit:** Major clarity boost with acceptable token cost increase
 ```
 
 ---
 
-## 🚫 Anti-Patterns (Evite!)
+## 🚫 Anti-Patterns (Avoid!)
 
-| Anti-Pattern | Problema | Solução |
+| Anti-Pattern | Problem | Solution |
 |--------------|----------|---------|
-| "Seja criativo" | Impreciso, respostas inconsistentes | "Responda com exatamente..." |
-| "Use emojis" | Bot não sabe quando usar | "Use 1 emoji por linha: 🎯" |
-| "Seja profissional" | Significado ambíguo | "Tom: formal, respeitoso, conciso" |
-| "Responda tudo" | Respostas muito longas | "Máximo [N] palavras" |
+| "Be creative" | Imprecise, inconsistent output | "Respond with exactly..." |
+| "Use emojis" | Bot doesn't know when to use them | "Use 1 emoji per line: 🎯" |
+| "Be professional" | Ambiguous meaning | "Tone: formal, respectful, concise" |
+| "Answer everything" | Responses get too long | "Maximum [N] words" |
 
 ---
 
 ## 💬 Chat Patterns
 
-### Padrão 1: Análise + Melhoria (Mais comum)
+### Pattern 1: Analysis + Improvement (Most Common)
 ```
-Você: "Melhore este prompt: [X]"
-Skill: [Análise + Melhorias + Versão Nova]
-Você: "Use mais emojis"
-Skill: [Versão atualizada com mais emojis]
-```
-
-### Padrão 2: Design de Fluxo
-```
-Você: "Desenhe fluxo conversacional para..."
-Skill: [Diagrama ASCII + Prompts para cada turno]
-Você: "Adicione filtros de preço"
-Skill: [Fluxo atualizado com nova branch]
+You: "Improve this prompt: [X]"
+Skill: [Analysis + Improvements + New Version]
+You: "Use more emojis"
+Skill: [Updated version with more emojis]
 ```
 
-### Padrão 3: Validação Iterativa
+### Pattern 2: Flow Design
 ```
-Você: "Audite este prompt"
-Skill: [Análise de 10 critérios]
-Você: "Corrija os 3 issues críticos"
-Skill: [Versão corrigida]
-Você: "Pronto?"
-Skill: "✅ Pronto para produção!"
+You: "Design conversation flow for..."
+Skill: [ASCII Diagram + Prompts for each turn]
+You: "Add price filters"
+Skill: [Updated flow with new branch]
+```
+
+### Pattern 3: Iterative Validation
+```
+You: "Audit this prompt"
+Skill: [10-criteria analysis]
+You: "Fix the 3 critical issues"
+Skill: [Fixed version]
+You: "Ready?"
+Skill: "✅ Ready for production!"
 ```
 
 ---
 
-## 🎓 Template para Seus Próprios Prompts
+## 🎓 Template for Custom Prompts
 
-Copie este template e preencha:
+Copy this template and fill it out:
 
 ```
-### 🤖 Seu Robô [Nome]
+### 🤖 Your Bot [Name]
 
-**Seu Objetivo:**
-- [Objetivo 1]
-- [Objetivo 2]
+**Your Goal:**
+- [Goal 1]
+- [Goal 2]
 
-**Seu Público:**
-[Descrever usuários]
+**Your Audience:**
+[Describe users]
 
 **Constraints:**
 ✅ [Rule 1]
@@ -315,27 +315,27 @@ Copie este template e preencha:
 ❌ [Never 1]
 ❌ [Never 2]
 
-**Formato de Resposta:**
-[Estrutura esperada: JSON, markdown, etc]
+**Output Format:**
+[Expected structure: JSON, markdown, etc]
 
-**Exemplos:**
-[1-2 exemplos de entrada/saída]
+**Examples:**
+[1-2 input/output examples]
 
-**Tratamento de Erros:**
-- Caso 1: [Resposta]
-- Caso 2: [Resposta]
+**Error Handling:**
+- Case 1: [Response]
+- Case 2: [Response]
 ```
 
 ---
 
-**Próximos Passos:**
-1. Escolha um prompt seu
-2. Passe para @prompt-improver
-3. Itere até ficar satisfeito
-4. Use em produção
-5. Colete feedback de usuários
+**Next Steps:**
+1. Choose an existing prompt
+2. Ask @prompt-improver to test it
+3. Iterate until satisfied
+4. Deploy to production
+5. Gather user feedback
 
 ---
 
-**Última atualização:** 19 de dezembro de 2025  
+**Last Updated:** December 19, 2025  
 **Status:** ✅ Production Ready

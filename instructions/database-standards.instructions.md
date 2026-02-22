@@ -1,7 +1,7 @@
 ---
 description: "Database development standards for SQLAlchemy/Alembic"
 name: "Database Development Standards"
-applyTo: "**/*migration*.py"
+applyTo: "**/{*migration*.py,models/*.py}"
 ---
 
 # Database Development Standards (Maat)

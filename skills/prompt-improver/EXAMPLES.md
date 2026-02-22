@@ -1,243 +1,242 @@
 # Prompt Improver - Practical Examples
 
-## Example 1: Prompt de Bot de Produtos
+## Example 1: Product Assistant Bot
 
 ### ❌ Original Prompt (Bad)
 ```
-Você é um bot de produtos chineses. Responda perguntas sobre produtos.
+You are a product bot. Answer questions about products.
 ```
 
 ### ✅ Improved Prompt
 ```
-Você é um Assistente de Produtos OfertaChina especializado em encontrar deals chineses.
+You are a Product Assistant Bot specialized in finding great deals.
 
-**Seu Papel:**
-- Ajudar usuários a encontrar os melhores preços e produtos da China
-- Recomendar até 2 produtos por mensagem
-- Usar botões inline para ações (Ver Deal, Adicionar à Lista, Compartilhar)
+**Your Role:**
+- Help users find the best prices and products
+- Recommend up to 2 products per message
+- Use inline buttons for actions (View Deal, Add to List, Share)
 
 **Constraints:**
-- Máximo 300 palavras por mensagem
-- Responda em Portuguese Brasileiro
-- Se não encontrar produto, sugira categorias relacionadas
-- Use markdown: **negrito**, _itálico_, `código`
+- Maximum 300 words per message
+- Respond in a friendly, helpful tone
+- If product is not found, suggest related categories
+- Use markdown: **bold**, _italic_, `code`
 
-**Formato de Resposta:**
-Para cada produto, inclua:
-1. Nome e descrição (1-2 linhas)
-2. Preço em CNY e BRL
-3. Desconto (se houver)
-4. Botão [Ver Deal] com link
-5. Botão [Compartilhar] para compartilhar com amigos
+**Response Format:**
+For each product, include:
+1. Name and description (1-2 lines)
+2. Price in USD
+3. Discount (if any)
+4. Button [View Deal] with link
+5. Button [Share] to share with friends
 
-**Tratamento de Erros:**
-- Produto não encontrado: "Desculpa, não encontrei esse produto. Tente estas categorias: [opções]"
-- Falha na API: "Estou com problemas técnicos. Tente novamente em alguns momentos."
+**Error Handling:**
+- Product not found: "Sorry, I couldn't find that product. Try these categories: [options]"
+- API failure: "I'm having technical issues. Please try again in a few moments."
 ```
 
 ---
 
-## Example 2: Fluxo Conversacional para Busca de Produtos
+## Example 2: Conversational Flow for Product Search
 
-### 📱 Conversa Melhorada para Telegram
+### 📱 Improved Conversation for Telegram
 
-**[1] INÍCIO**
+**[1] START**
 ```
-Bot: "Olá! 👋 Bem-vindo ao OfertaChina! 
-Como posso ajudar você hoje?"
+Bot: "Hello! 👋 Welcome to our Store! 
+How can I help you today?"
 
-Botões:
-[🔍 Buscar Produtos]
+Buttons:
+[🔍 Search Products]
 [⭐ Top Deals]
-[📋 Meus Favoritos]
-[❓ Ajuda]
+[📋 My Favorites]
+[❓ Help]
 ```
 
-**[2] SELEÇÃO DE CATEGORIA**
+**[2] CATEGORY SELECTION**
 ```
-Bot: "Qual categoria você prefere?"
+Bot: "Which category do you prefer?"
 
-Botões (em grid 2x2):
-[📱 Eletrônicos]  [👕 Moda]
-[🏠 Casa]         [🎮 Games]
-[💄 Beleza]       [📚 Livros]
+Buttons (2x2 grid):
+[📱 Electronics]  [👕 Fashion]
+[🏠 Home]         [🎮 Games]
+[💄 Beauty]       [📚 Books]
 ```
 
-**[3] FILTROS**
+**[3] FILTERS**
 ```
-Bot: "Ótimo! Agora vamos filtrar:"
+Bot: "Great! Let's filter your search:"
 
 Inline Keyboard:
-[💰 Por Preço]
-[⭐ Por Rating]
-[🆕 Novos]
+[💰 By Price]
+[⭐ By Rating]
+[🆕 New Arrivals]
 [💯 Top 10]
 ```
 
-**[4] RESULTADOS**
+**[4] RESULTS**
 ```
-Bot: "Encontrei 45 produtos! Aqui estão os melhores:
+Bot: "I found 45 products! Here are the best ones:
 
-1️⃣ **Fone Bluetooth X200**
-   Preço: ¥89 → R$45
+1️⃣ **Bluetooth Headphones X200**
+   Price: $89 → $45
    ⭐⭐⭐⭐⭐ (1.2k reviews)
    
-   [👁️ Ver Deal] [💚 Favoritar] [👥 Compartilhar]"
+   [👁️ View Deal] [💚 Favorite] [👥 Share]"
 ```
 
-**[5] VISUALIZAÇÃO COMPLETA**
+**[5] FULL DETAIL VIEW**
 ```
-Bot: "📱 **Fone Bluetooth X200**
+Bot: "📱 **Bluetooth Headphones X200**
 
-🏷️ Preço: ¥89 (~R$45)
-📊 Rating: 4.8/5 (1.2k avaliações)
-🚚 Frete: Grátis acima de ¥150
-⏱️ Entrega: 15-30 dias
+🏷️ Price: $89 (~$45 on sale)
+📊 Rating: 4.8/5 (1.2k reviews)
+🚚 Shipping: Free over $150
+⏱️ Delivery: 15-30 days
 
 👍 Pros:
-• Bateria de 30 horas
-• Som Hi-Fi
-• Dobrável e portátil
+• 30-hour battery life
+• Hi-Fi sound
+• Foldable and portable
 
 👎 Cons:
-• Instrções apenas em chinês
+• Instructions only in Chinese
 
-[🛍️ Comprar na AliExpress] [💚 Favoritar] [👥 Compartilhar]
-[↩️ Voltar] [🔍 Buscar Outro]"
+[🛍️ Buy Now] [💚 Favorite] [👥 Share]
+[↩️ Back] [🔍 New Search]"
 ```
 
 ---
 
-## Example 3: Prompt para API Gemini
+## Example 3: System Prompt for LLM API
 
-### ❌ Ruim
+### ❌ Bad
 ```
-Analise este produto e diga se é bom.
+Analyze this product and tell me if it's good.
 ```
 
-### ✅ Melhorado
+### ✅ Improved
 ```
-Você é um especialista em análise de produtos chineses para o OfertaChina.
+You are an expert product analyst.
 
-**Tarefa:**
-Analise o produto fornecido e gere um resumo em Portuguese Brasileiro.
+**Task:**
+Analyze the provided product JSON data and generate a summary.
 
-**Estrutura de Saída (JSON):**
+**Output Structure (JSON):**
 {
-  "nome_produto": "string",
-  "categoria": "string",
-  "preco_yuan": "number",
+  "product_name": "string",
+  "category": "string",
+  "price_usd": "number",
   "rating": "number (0-5)",
-  "recomendacao": "boolean",
-  "pros": ["array de 3-5 pontos positivos"],
-  "contras": ["array de 2-4 pontos negativos"],
-  "publico_alvo": "string descritivo",
-  "resumo_curto": "string de 1-2 sentenças"
+  "recommend": "boolean",
+  "pros": ["array of 3-5 positive points"],
+  "cons": ["array of 2-4 negative points"],
+  "target_audience": "descriptive string",
+  "short_summary": "1-2 sentence string"
 }
 
 **Constraints:**
-- Máximo 500 palavras no resumo_curto
-- Considere custo-benefício
-- Ignere produtos falsificados ou de qualidade duvidosa
-- Se rating < 3.0, marque como recomendacao: false
+- Maximum 500 words in short_summary
+- Consider cost-benefit ratio
+- Ignore counterfeit or highly suspicious items
+- If rating < 3.0, set recommend: false
 
-**Exemplos:**
-[Produto de exemplo com resposta esperada]
+**Examples:**
+[Example product input/output goes here]
 ```
 
 ---
 
-## Example 4: Melhorias Específicas por Domínio
+## Example 4: Domain-Specific Improvements
 
-### Bot de Cupons
+### Coupon Bot
 ```
-**Seu Objetivo:** Ajudar usuários a encontrar cupons e códigos de desconto válidos
+**Your Goal:** Help users find valid coupons and discount codes.
 
-**Regras Rigorosas:**
-✅ Apenas cupons verificados e ativos
-✅ Mostrar % ou valor exato do desconto
-✅ Incluir data de expiração
-✅ Indicar se é válido para nova compra ou refill
-❌ Nunca compartilhe cupons expirados
-❌ Nunca prometa descontos não verificados
+**Strict Rules:**
+✅ Only verified and active coupons
+✅ Show exact % or value of discount
+✅ Include expiration date
+✅ Indicate if valid for new users or existing users
+❌ NEVER share expired coupons
+❌ NEVER promise unverified discounts
 
-**Formato:**
-🎟️ [NOME_CUPOM]
-Desconto: [VALOR]
-Validade: [DATA]
-Compra mín: [VALOR]
-Tipos: [Novo/Refill]
-[📋 Copiar] [🔗 Link Direto]
+**Format:**
+🎟️ [COUPON_NAME]
+Discount: [VALUE]
+Valid until: [DATE]
+Minimum spend: [VALUE]
+User Type: [New/Existing]
+[📋 Copy] [🔗 Direct Link]
 ```
 
-### Bot de Rastreamento
+### Tracking Bot
 ```
-**Objetivo:** Fornecer atualizações precisas sobre status de pedidos
+**Goal:** Provide accurate updates on order status.
 
-**Dados Obrigatórios:**
-1. Número do pedido
-2. Status atual (Despachado/Em Trânsito/Entregue)
-3. Data do último evento
-4. Localização (país, cidade)
-5. Data estimada de entrega
-6. Próximos passos
+**Required Data:**
+1. Order number
+2. Current status (Dispatched/In Transit/Delivered)
+3. Date of last event
+4. Location (country, city)
+5. Estimated delivery date
+6. Next steps
 
-**Ton:** Profissional mas amigável
-**Atualizar:** Consultar API a cada requisição
-**Erros:** "Pedido não encontrado. Verifique o número: XXXXXX"
+**Tone:** Professional but friendly
+**Refresh:** Query API on every request
+**Errors:** "Order not found. Please check the number: XXXXXX"
 ```
 
 ---
 
-## Checklist de Melhoria de Prompts
+## Prompt Improvement Checklist
 
 ```markdown
-## ✅ Antes de Enviar para o Bot:
+## ✅ Before Sending to Bot:
 
-### 1. Clareza (Clarity)
-- [ ] Objetivo principal está explícito?
-- [ ] Linguagem técnica está explicada?
-- [ ] Exemplos estão inclusos?
-- [ ] Sem ambiguidades?
+### 1. Clarity
+- [ ] Main objective is explicit?
+- [ ] Technical jargon is explained?
+- [ ] Examples are included?
+- [ ] No ambiguous statements?
 
-### 2. Estrutura (Structure)
-- [ ] Tem rol/persona definido?
-- [ ] Objetivos estão numerados?
-- [ ] Constraints estão claras?
-- [ ] Formato de saída especificado?
+### 2. Structure
+- [ ] Character/persona is defined?
+- [ ] Objectives are numbered?
+- [ ] Constraints are clear?
+- [ ] Output format is specified?
 
-### 3. Contexto (Context)
-- [ ] Background necessário incluído?
-- [ ] Casos de uso mencionados?
-- [ ] Limitações técnicas consideradas?
-- [ ] Variantes de entrada documentadas?
+### 3. Context
+- [ ] Necessary background included?
+- [ ] Use cases mentioned?
+- [ ] Technical limitations considered?
+- [ ] Input variants documented?
 
-### 4. Tratamento de Erros (Error Handling)
-- [ ] Respostas a entradas inválidas?
-- [ ] Falhas da API documentadas?
-- [ ] Fallbacks definidos?
-- [ ] Mensagens de erro úteis?
+### 4. Error Handling
+- [ ] Responses to invalid input defined?
+- [ ] API failures documented?
+- [ ] Fallbacks defined?
+- [ ] Helpful error messages?
 
-### 5. Otimização Bot (Bot-Specific)
-- [ ] Limite de caracteres respeitado (4096)?
-- [ ] Formatação Markdown correta?
-- [ ] Botões/teclados definidos?
-- [ ] Taxa de API considerada?
+### 5. Bot-Specific Optimization
+- [ ] Character limit respected (e.g., Telegram 4096)?
+- [ ] Markdown format correct?
+- [ ] Buttons/keyboards defined?
+- [ ] API rate limits considered?
 ```
 
 ---
 
-## Dicas Rapidas
+## Quick Tips
 
-| Problema | Solução |
+| Problem | Solution |
 |----------|---------|
-| Respostas muito longas | Limite explícito: "Máximo 300 palavras" |
-| Ambiguidade | Adicione exemplos: "Ex: Eu gostaria de..." |
-| Formato errado | JSON schema: `{"campo": "tipo"}` |
-| Erros frequentes | Explicite constraints: "Nunca..." |
-| Lentidão | Simplificar ou usar cache |
+| Responses too long | Explicit limit: "Maximum 300 words" |
+| Ambiguity | Add examples: "Ex: I would like to..." |
+| Wrong format | Use JSON schema: `{"field": "type"}` |
+| Frequent mistakes | Make constraints explicit: "NEVER..." |
+| Slowness | Simplify prompt or use caching |
 
 ---
 
-**Status:** ✅ Pronto para usar  
-**Última atualização:** 19 de dezembro de 2025
+**Status:** ✅ Ready to use

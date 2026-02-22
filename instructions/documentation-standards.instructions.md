@@ -74,14 +74,14 @@ docs/memory-bank/
 
 ## 👥 Agent Responsibilities
 
-### **@Planner** (EXCLUSIVE OWNER)
+### **@mnemosyne** (EXCLUSIVE OWNER)
 ✅ Creates/updates ALL Memory Bank files  
 ✅ Manages `_tasks/_index.md` and `_notes/_index.md`  
 ✅ Handoff: None (Planner is final destination)  
 
 ### **All Other Agents** (Backend, Frontend, Database, Analyst, etc)
 ❌ NEVER create .md files  
-✅ Handoff to @Planner with structured data  
+✅ Handoff to @mnemosyne with structured data  
 ✅ Example: "Update Memory Bank with bug fix analysis"  
 
 ### **Subagents**
@@ -107,7 +107,7 @@ User says: *"Create a note about the JWT implementation"*
 
 **Implementer/Analyst finishes work:**
 ```
-Use @Planner to: Document the following in Memory Bank:
+Use @mnemosyne to: Document the following in Memory Bank:
 - Task: Product extraction bug fix
 - Type: TASK update or NOTE creation
 - Content: [brief summary of what to document]
@@ -134,7 +134,7 @@ DO NOT create:
 
 USE:
 - Update 05-progress-log.md instead
-- Create TASK/NOTE via @Planner
+- Create TASK/NOTE via @mnemosyne
 ```
 
 ### ❌ Anti-Pattern 2: Duplicate Documentation
@@ -169,7 +169,7 @@ USE:
 1. [ ] User explicitly asked for this documentation? (or is it code output)
 2. [ ] Does it belong in Memory Bank?
 3. [ ] Is it a TASK or NOTE that needs tracking?
-4. [ ] Should I handoff to @Planner instead?
+4. [ ] Should I handoff to @mnemosyne instead?
 5. [ ] Am I replacing or duplicating an existing file?
 6. [ ] Will this still be useful in 1 month?
 
@@ -194,7 +194,7 @@ If ANY answer is "no", DON'T CREATE IT.
 
 **Action**:
 ```
-Handoff to @Planner:
+Handoff to @mnemosyne:
 "Document the product extraction bug fix. 
 Root cause: JSON mapping missing null check.
 Solution: Added validation in ProductExtractor.validate_json()
@@ -213,7 +213,7 @@ Impact: Fixes 15% of failed extractions"
 
 **Action**:
 ```
-Handoff to @Planner:
+Handoff to @mnemosyne:
 "Create a note about async/await decision.
 Decision: All I/O operations must use async/await
 Rationale: Performance, consistency, handles network timeouts
@@ -240,7 +240,7 @@ Create:
 
 **Correct**:
 ```
-Handoff to @Planner:
+Handoff to @mnemosyne:
 "Update Memory Bank with analysis findings regarding [topic]"
 ```
 
