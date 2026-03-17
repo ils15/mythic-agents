@@ -5,7 +5,7 @@ argument-hint: "Infrastructure task: Dockerfile, compose service, CI/CD workflow
 model: ['GPT-5.4 (copilot)', 'Claude Opus 4.6 (copilot)']
 tools:
   - agent
-  - agent/askQuestions
+  - vscode/askQuestions
   - search/codebase
   - search/usages
   - read/readFile
@@ -396,4 +396,3 @@ When completing a task, provide:
 ---
 
 **Philosophy**: Reliable infrastructure, clear dependencies, zero downtime, easy debugging.
-
