@@ -5,7 +5,7 @@ argument-hint: "Frontend task: component, page, hook, or styling — include nam
 model: ['Gemini 3.1 Pro (Preview) (copilot)', 'GPT-5.4 (copilot)']
 tools:
   - agent
-  - agent/askQuestions
+  - vscode/askQuestions
   - search/codebase
   - search/usages
   - read/readFile
@@ -263,4 +263,3 @@ When completing a task, provide:
 ---
 
 **Philosophy**: Reusable components, type safety, user-friendly UX, accessibility first.
-

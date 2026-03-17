@@ -5,7 +5,7 @@ argument-hint: "Database task: migration, schema change, query optimization, or 
 model: ['GPT-5.4 (copilot)', 'Claude Opus 4.6 (copilot)']
 tools:
   - agent
-  - agent/askQuestions
+  - vscode/askQuestions
   - search/codebase
   - search/usages
   - read/readFile
@@ -297,4 +297,3 @@ When completing a task, provide:
 ---
 
 **Philosophy**: Clean schema design, safe migrations, optimal performance, zero data loss.
-

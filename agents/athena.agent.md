@@ -5,7 +5,7 @@ argument-hint: "Feature or epic to plan — describe the requirement, goal, and 
 model: ['GPT-5.4 (copilot)', 'Claude Opus 4.6 (copilot)']
 tools:
    - agent
-   - agent/askQuestions
+   - vscode/askQuestions
    - search/codebase
    - search/usages
    - web/fetch
@@ -26,7 +26,7 @@ user-invocable: true
 2. **Research** codebase (use `search/codebase` directly OR delegate to @apollo if complex)
 3. **Plan** in CONCISE phases (3-5 max, not 10+)
 4. **Validate plan quality** via @temis
-5. **Approve** via `agent/askQuestions`
+5. **Approve** via `vscode/askQuestions`
 6. **Handoff** to @zeus for execution
 
 ## Model Source of Truth
@@ -77,7 +77,7 @@ Present plan in **chat only** (no artifact files unless user explicitly requests
 
 ## Approval Gate
 
-After creating plan, use `agent/askQuestions`:
+After creating plan, use `vscode/askQuestions`:
 ```
 Questions:
 - "Plan ready. Open questions: [list]. Approve? (yes/changes needed)"
@@ -117,4 +117,3 @@ This is worth exploring separately. Use /fork to compare approaches.
 For external docs/specs, use `web/fetch` (see `internet-search` skill for patterns):
 - RFCs, official documentation, GitHub issues/PRs
 - Synthesize findings into plan recommendations
-

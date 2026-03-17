@@ -5,7 +5,7 @@ argument-hint: "What to review — point at the phase or changed files (e.g. 're
 model: ['GPT-5.4 (copilot)', 'Claude Opus 4.6 (copilot)']
 tools:
   - agent
-  - agent/askQuestions
+  - vscode/askQuestions
   - search/codebase
   - search/usages
   - read/readFile
