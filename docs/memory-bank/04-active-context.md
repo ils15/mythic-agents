@@ -7,17 +7,21 @@
 
 ## Current Focus
 
-Harden and automate GitHub workflow operations for tag-based releases and push-time verification.
+Agent Lifecycle Hooks implementation (Phase 1 & 2 complete; framework integration in progress).
 
-**Status:** Complete
+**Status:** Phase 1 & 2 implementation ✅ | Framework integration ✅ (copilot-instructions.md + AGENTS.md updated)
 
 ---
 
 ## Most Recent Decision
 
-Keep the existing release workflow and improve it incrementally: fix tag trigger pattern and add a dedicated verify workflow for `main` push/PR checks.
+Implement VS Code Copilot agent lifecycle hooks (March 2026 API) across 5 configuration points:
+- **Phase 1**: Security (PreToolUse) + Formatting (PostToolUse) + Session Logging (SessionStart)
+- **Phase 2**: Delegation Tracking (SubagentStart/Stop) with interactive handoff buttons
 
-**Date:** 2026-03-08
+**Date:** 2026-03-15
+
+**Rationale**: Addresses Zeus coordination requirements from `.github/copilot-instructions.md` mandate: "Every implementing agent IMMEDIATELY calls @temis after completing code" — hooks automate this workflow with audit trail and interactive approval gates.
 
 ---
 
@@ -30,8 +34,9 @@ Keep the existing release workflow and improve it incrementally: fix tag trigger
 
 ## Next Steps
 
-1. Validate the new workflows in GitHub Actions after the next push.
-2. Use @iris to draft the next release tag and push tags to trigger automated release publication.
+1. Deploy hooks to staging branch and test with actual Zeus orchestration workflows.
+2. Iterate on delegation handler scripts based on real agent output.
+3. Add hook configuration examples to agent training docs.
 
 ---
 
