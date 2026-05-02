@@ -34,6 +34,46 @@ Or manually:
 
 <!-- Project entries below this line. Most recent at the top. -->
 
+## [2026-05-02] — Ciclo de Adaptações Cross-Platform Completo
+
+**Agentes envolvidos:** @athena, @apollo, @hermes, @aphrodite, @maat, @temis, @ra, @iris, @mnemosyne, @talos, @hefesto, @quiron, @eco, @nix, @gaia  
+**Status:** ✅ Ciclo completo (14 adaptações)
+
+### O que foi feito
+
+#### Alta Prioridade (5)
+1. **Per-Agent Permissions** — Permissões granulares por agente no opencode.json (edit deny, bash allow/ask, task routing)
+2. **DAG Wave Execution** — Modelo de execução paralela baseado em ondas DAG substituindo fases sequenciais
+3. **Learning Routing Triple** — Organização de memória em 3 categorias: Facts (/memories/repo/), Patterns (skills/), Conventions (.github/copilot-instructions.md)
+4. **Self-Reflection** — Bounded research framework: limites de tempo (5-8min), queries (3-10), regra de convergência (80% → parar)
+5. **PR-Native Workflow** — Modo padrão de criação de PR no Iris, enforcement de Conventional Commits
+
+#### Média Prioridade (5)
+6. **Anti-Rationalization Protocol** — Gates de artefato estruturados (PLAN→IMPL→REVIEW) sem documentação desnecessária
+7. **Artifact Protocol System** — Ciclo de vida PLAN/IMPL/REVIEW/DISC/ADR com persistência via Mnemosyne
+8. **Agent Lifecycle Hooks Fase 1** — Segurança (PreToolUse), Formatação (PostToolUse), Logging (SessionStart)
+9. **Agent Lifecycle Hooks Fase 2** — Rastreamento de delegação (SubagentStart/Stop) com handoffs interativos
+10. **Copilot Agent Docs Alignment** — Roteamento GPT-5.4 mini, documentação VS Code 1.111-1.114
+
+#### Baixa Prioridade (4)
+11. **\`/assign-issue\` Workflow** — Fluxo de issue GitHub para implementação via agentes (agents/iris.agent.md)
+12. **Cloud Delegation** — Execução em background para tarefas longas (agents/zeus.agent.md)
+13. **Worktree Isolation** — Git worktrees para paralelismo seguro entre agentes (agents/zeus.agent.md)
+14. **Plugin Marketplace Structure** — Documentação de instalação como plugin OpenCode (platform/opencode/README.md)
+
+### Decisões principais
+- Todo o ciclo de adaptações foi concluído sem quebrar funcionalidades existentes
+- Alterações sempre append-only, sem modificação de lógica existente
+- Memory bank atualizado com todas as 14 adaptações documentadas
+
+### Arquivos principais alterados
+- \`opencode.json\` — Configuração de permissões e agentes
+- \`agents/*.agent.md\` — Todos os 16 agentes com permissões e handoffs
+- \`platform/opencode/\` — Adapter, README, agentes OpenCode
+- \`.github/hooks/\` — Lifecycle hooks security/format/logging/delegation
+- \`instructions/\` — Standards e regras
+- \`docs/memory-bank/\` — Active context e progress log
+
 ## [2026-04-03] — Copilot Agent Docs Alignment and Feature Review
 
 **Agents involved:** GitHub Copilot

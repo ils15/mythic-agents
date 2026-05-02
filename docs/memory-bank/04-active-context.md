@@ -7,15 +7,32 @@
 
 ## Current Focus
 
-**Copilot Agent Docs Alignment** — Keeping agent configs and documentation aligned with current Copilot/VS Code capabilities, including GPT-5.4 mini routing and recent agent tooling updates.
+**Finalização do ciclo de adaptações Pantheon** — 14 adaptações implementadas (5 alta + 5 média + 4 baixa prioridade) completando o ciclo cross-platform de evolução do framework.
 
-**Status**: ✅ Model routing updated, docs being aligned, research complete for 1.111-1.114 feature adoption
+**Status**: ✅ Ciclo completo em 2026-05-02
 
 ---
 
 ## Previous Decision
 
-Adopt the new agent routing mix in custom agent frontmatter and docs: `GPT-5.4 mini` should be included wherever `Claude Haiku 4.5` remains available as a lightweight option.
+**Low-Priority Feature Batch + Ciclo de Adaptações Completo**
+
+**Date:** 2026-05-02
+
+**Rationale**: Final 4 items complete the full Pantheon adaptation cycle (cross-platform agent support, GitHub workflow integration, cloud/background execution, plugin marketplace packaging).
+
+**Files Changed**:
+- agents/iris.agent.md — Added \`/assign-issue\` Workflow section
+- agents/zeus.agent.md — Added Cloud Delegation + Worktree Isolation sections
+- platform/opencode/README.md — Added Plugin Installation + Compatibility sections
+- docs/memory-bank/04-active-context.md — Updated current focus + decisions (this file)
+- docs/memory-bank/05-progress-log.md — Added cycle completion entry
+
+---
+
+## Previous Decision
+
+Adopt the new agent routing mix in custom agent frontmatter and docs: \`GPT-5.4 mini\` should be included wherever \`Claude Haiku 4.5\` remains available as a lightweight option.
 
 **Date:** 2026-04-03
 
@@ -70,11 +87,11 @@ Implement VS Code Copilot agent lifecycle hooks (March 2026 API) across 5 config
 
 ## Next Steps
 
-1. Deploy bounded research rules to team (share [RESEARCH-OPTIMIZATION-QUICK-REF.md](RESEARCH-OPTIMIZATION-QUICK-REF.md))
-2. Start next sprint with @athena 5-minute planning (use quick-plan-large-feature.prompt)
-3. Monitor metrics: plan time, discovery time, execution smoothness
-4. After 2 weeks: Review feedback and adjust convergence thresholds if needed
-5. Update memory bank on deployment success/learnings
+1. Consider v3.0.0 release tagging (all 14 adaptations complete)
+2. Share plugin installation docs with team
+3. Monitor adoption of \`/assign-issue\` workflow
+4. Gather feedback on worktree isolation and cloud delegation patterns
+5. Plan next development cycle based on team input
 
 ---
 
